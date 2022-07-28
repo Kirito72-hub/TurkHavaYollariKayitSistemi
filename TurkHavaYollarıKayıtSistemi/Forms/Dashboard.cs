@@ -20,6 +20,16 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            labelKullanciAdi.Text = ConstaValue.KullanciAdi;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
