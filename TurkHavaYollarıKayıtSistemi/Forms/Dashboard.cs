@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TurkHavaYollarıKayıtSistemi;
+using TurkHavaYollarıKayıtSistemi.KullanciKontrolUi;
 
 namespace TurkHavaYollarıKayıtSistemi
 {
@@ -23,13 +23,13 @@ namespace TurkHavaYollarıKayıtSistemi
             labelKullanciAdi.Text = ConstValue.KullanciAdi;
         }
 
-       /* private void addControls(UserControl uc)
+        private void addControls(UserControl uc)
         {
             panelControl.Controls.Clear();
             uc.Dock = DockStyle.Fill;
             panelControl.Controls.Add(uc);
             uc.BringToFront();
-        }*/
+        }
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -38,7 +38,9 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            KC_AnaSayfa AnaSayfa = new KC_AnaSayfa();
+            addControls(AnaSayfa);
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace TurkHavaYollarıKayıtSistemi
         }
 
         private void labelTime_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnYolculuk_Click(object sender, EventArgs e)
         {
 
         }

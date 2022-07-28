@@ -31,24 +31,24 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.SideBanner = new System.Windows.Forms.Panel();
-            this.TopPanel = new System.Windows.Forms.Panel();
-            this.Banner = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelKullanciAdi = new System.Windows.Forms.Label();
-            this.btnAnaSayfa = new System.Windows.Forms.Button();
-            this.btnYolculuk = new System.Windows.Forms.Button();
-            this.btnYolcu = new System.Windows.Forms.Button();
-            this.btnUcak = new System.Windows.Forms.Button();
             this.btnKullanci = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
+            this.btnUcak = new System.Windows.Forms.Button();
+            this.btnYolcu = new System.Windows.Forms.Button();
+            this.btnYolculuk = new System.Windows.Forms.Button();
+            this.btnAnaSayfa = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.labelKullanciAdi = new System.Windows.Forms.Label();
+            this.TopPanel = new System.Windows.Forms.Panel();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Banner = new System.Windows.Forms.Panel();
+            this.labelTime = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.labelTime = new System.Windows.Forms.Label();
             this.SideBanner.SuspendLayout();
             this.TopPanel.SuspendLayout();
-            this.Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Banner.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBanner
@@ -68,44 +68,50 @@
             this.SideBanner.Size = new System.Drawing.Size(283, 861);
             this.SideBanner.TabIndex = 0;
             // 
-            // TopPanel
+            // btnKullanci
             // 
-            this.TopPanel.Controls.Add(this.btnClose);
-            this.TopPanel.Controls.Add(this.pictureBox1);
-            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TopPanel.Location = new System.Drawing.Point(283, 0);
-            this.TopPanel.Name = "TopPanel";
-            this.TopPanel.Size = new System.Drawing.Size(1501, 110);
-            this.TopPanel.TabIndex = 0;
+            this.btnKullanci.BackColor = System.Drawing.Color.SlateGray;
+            this.btnKullanci.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKullanci.Location = new System.Drawing.Point(0, 774);
+            this.btnKullanci.Name = "btnKullanci";
+            this.btnKullanci.Size = new System.Drawing.Size(283, 86);
+            this.btnKullanci.TabIndex = 4;
+            this.btnKullanci.Text = "Kullancı";
+            this.btnKullanci.UseVisualStyleBackColor = false;
             // 
-            // Banner
+            // btnUcak
             // 
-            this.Banner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
-            this.Banner.Controls.Add(this.labelTime);
-            this.Banner.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Banner.Location = new System.Drawing.Point(283, 110);
-            this.Banner.Name = "Banner";
-            this.Banner.Size = new System.Drawing.Size(1501, 118);
-            this.Banner.TabIndex = 1;
+            this.btnUcak.BackColor = System.Drawing.Color.SlateGray;
+            this.btnUcak.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUcak.Location = new System.Drawing.Point(0, 691);
+            this.btnUcak.Name = "btnUcak";
+            this.btnUcak.Size = new System.Drawing.Size(283, 86);
+            this.btnUcak.TabIndex = 3;
+            this.btnUcak.Text = "Uçak";
+            this.btnUcak.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
+            // btnYolcu
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(853, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(410, 115);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.btnYolcu.BackColor = System.Drawing.Color.SlateGray;
+            this.btnYolcu.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYolcu.Location = new System.Drawing.Point(0, 610);
+            this.btnYolcu.Name = "btnYolcu";
+            this.btnYolcu.Size = new System.Drawing.Size(283, 86);
+            this.btnYolcu.TabIndex = 2;
+            this.btnYolcu.Text = "Yolcu";
+            this.btnYolcu.UseVisualStyleBackColor = false;
             // 
-            // labelKullanciAdi
+            // btnYolculuk
             // 
-            this.labelKullanciAdi.AutoSize = true;
-            this.labelKullanciAdi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelKullanciAdi.Location = new System.Drawing.Point(126, 37);
-            this.labelKullanciAdi.Name = "labelKullanciAdi";
-            this.labelKullanciAdi.Size = new System.Drawing.Size(124, 29);
-            this.labelKullanciAdi.TabIndex = 0;
-            this.labelKullanciAdi.Text = "KullanciAdi";
+            this.btnYolculuk.BackColor = System.Drawing.Color.SlateGray;
+            this.btnYolculuk.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnYolculuk.Location = new System.Drawing.Point(0, 532);
+            this.btnYolculuk.Name = "btnYolculuk";
+            this.btnYolculuk.Size = new System.Drawing.Size(283, 86);
+            this.btnYolculuk.TabIndex = 1;
+            this.btnYolculuk.Text = "Yolculuk";
+            this.btnYolculuk.UseVisualStyleBackColor = false;
+            this.btnYolculuk.Click += new System.EventHandler(this.btnYolculuk_Click);
             // 
             // btnAnaSayfa
             // 
@@ -119,49 +125,35 @@
             this.btnAnaSayfa.UseVisualStyleBackColor = false;
             this.btnAnaSayfa.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnYolculuk
+            // label1
             // 
-            this.btnYolculuk.BackColor = System.Drawing.Color.SlateGray;
-            this.btnYolculuk.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYolculuk.Location = new System.Drawing.Point(0, 532);
-            this.btnYolculuk.Name = "btnYolculuk";
-            this.btnYolculuk.Size = new System.Drawing.Size(283, 86);
-            this.btnYolculuk.TabIndex = 1;
-            this.btnYolculuk.Text = "Yolculuk";
-            this.btnYolculuk.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(17, 37);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 29);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Merhaba!";
             // 
-            // btnYolcu
+            // labelKullanciAdi
             // 
-            this.btnYolcu.BackColor = System.Drawing.Color.SlateGray;
-            this.btnYolcu.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYolcu.Location = new System.Drawing.Point(0, 610);
-            this.btnYolcu.Name = "btnYolcu";
-            this.btnYolcu.Size = new System.Drawing.Size(283, 86);
-            this.btnYolcu.TabIndex = 2;
-            this.btnYolcu.Text = "Yolcu";
-            this.btnYolcu.UseVisualStyleBackColor = false;
+            this.labelKullanciAdi.AutoSize = true;
+            this.labelKullanciAdi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelKullanciAdi.Location = new System.Drawing.Point(126, 37);
+            this.labelKullanciAdi.Name = "labelKullanciAdi";
+            this.labelKullanciAdi.Size = new System.Drawing.Size(124, 29);
+            this.labelKullanciAdi.TabIndex = 0;
+            this.labelKullanciAdi.Text = "KullanciAdi";
             // 
-            // btnUcak
+            // TopPanel
             // 
-            this.btnUcak.BackColor = System.Drawing.Color.SlateGray;
-            this.btnUcak.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUcak.Location = new System.Drawing.Point(0, 691);
-            this.btnUcak.Name = "btnUcak";
-            this.btnUcak.Size = new System.Drawing.Size(283, 86);
-            this.btnUcak.TabIndex = 3;
-            this.btnUcak.Text = "Uçak";
-            this.btnUcak.UseVisualStyleBackColor = false;
-            // 
-            // btnKullanci
-            // 
-            this.btnKullanci.BackColor = System.Drawing.Color.SlateGray;
-            this.btnKullanci.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKullanci.Location = new System.Drawing.Point(0, 774);
-            this.btnKullanci.Name = "btnKullanci";
-            this.btnKullanci.Size = new System.Drawing.Size(283, 86);
-            this.btnKullanci.TabIndex = 4;
-            this.btnKullanci.Text = "Kullancı";
-            this.btnKullanci.UseVisualStyleBackColor = false;
+            this.TopPanel.Controls.Add(this.btnClose);
+            this.TopPanel.Controls.Add(this.pictureBox1);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.Location = new System.Drawing.Point(283, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(1501, 110);
+            this.TopPanel.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -176,15 +168,36 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.button6_Click);
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(17, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Merhaba!";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(853, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(410, 115);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Banner
+            // 
+            this.Banner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
+            this.Banner.Controls.Add(this.labelTime);
+            this.Banner.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Banner.Location = new System.Drawing.Point(283, 110);
+            this.Banner.Name = "Banner";
+            this.Banner.Size = new System.Drawing.Size(1501, 118);
+            this.Banner.TabIndex = 1;
+            // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTime.Location = new System.Drawing.Point(1390, 32);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(99, 42);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "00:00";
+            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // panelControl
             // 
@@ -199,18 +212,6 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // labelTime
-            // 
-            this.labelTime.AutoSize = true;
-            this.labelTime.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTime.Location = new System.Drawing.Point(1390, 32);
-            this.labelTime.Name = "labelTime";
-            this.labelTime.Size = new System.Drawing.Size(99, 42);
-            this.labelTime.TabIndex = 0;
-            this.labelTime.Text = "00:00";
-            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // Dashboard
             // 
@@ -229,9 +230,9 @@
             this.SideBanner.ResumeLayout(false);
             this.SideBanner.PerformLayout();
             this.TopPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.Banner.ResumeLayout(false);
             this.Banner.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
