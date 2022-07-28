@@ -56,7 +56,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(971, 684);
+            this.panel1.Size = new System.Drawing.Size(1102, 900);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -86,6 +86,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.label5);
@@ -95,9 +97,9 @@
             this.panel2.Controls.Add(this.txtboxKullanci);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(971, 0);
+            this.panel2.Location = new System.Drawing.Point(1102, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(466, 684);
+            this.panel2.Size = new System.Drawing.Size(698, 900);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -107,7 +109,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(69, 579);
+            this.button1.Location = new System.Drawing.Point(192, 681);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(315, 50);
             this.button1.TabIndex = 5;
@@ -119,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(65, 487);
+            this.label5.Location = new System.Drawing.Point(188, 590);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 19);
             this.label5.TabIndex = 4;
@@ -129,7 +131,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(64, 404);
+            this.label4.Location = new System.Drawing.Point(187, 505);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 26);
             this.label4.TabIndex = 2;
@@ -139,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(64, 306);
+            this.label3.Location = new System.Drawing.Point(187, 407);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 26);
             this.label3.TabIndex = 0;
@@ -149,17 +151,18 @@
             // 
             this.txtboxSifre.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtboxSifre.ForeColor = System.Drawing.Color.Black;
-            this.txtboxSifre.Location = new System.Drawing.Point(69, 432);
+            this.txtboxSifre.Location = new System.Drawing.Point(192, 534);
             this.txtboxSifre.Name = "txtboxSifre";
             this.txtboxSifre.Size = new System.Drawing.Size(315, 43);
             this.txtboxSifre.TabIndex = 3;
+            this.txtboxSifre.UseSystemPasswordChar = true;
             this.txtboxSifre.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtboxKullanci
             // 
             this.txtboxKullanci.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtboxKullanci.ForeColor = System.Drawing.Color.Black;
-            this.txtboxKullanci.Location = new System.Drawing.Point(69, 334);
+            this.txtboxKullanci.Location = new System.Drawing.Point(192, 436);
             this.txtboxKullanci.Name = "txtboxKullanci";
             this.txtboxKullanci.Size = new System.Drawing.Size(315, 43);
             this.txtboxKullanci.TabIndex = 1;
@@ -168,7 +171,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(29, 66);
+            this.pictureBox1.Location = new System.Drawing.Point(146, 170);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(407, 113);
             this.pictureBox1.TabIndex = 0;
@@ -179,13 +182,12 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(421, 0);
+            this.button2.Location = new System.Drawing.Point(662, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(45, 38);
-            this.button2.TabIndex = 6;
+            this.button2.Size = new System.Drawing.Size(36, 34);
+            this.button2.TabIndex = 7;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // GirisFormu
             // 
@@ -193,7 +195,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1437, 684);
+            this.ClientSize = new System.Drawing.Size(1800, 900);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
