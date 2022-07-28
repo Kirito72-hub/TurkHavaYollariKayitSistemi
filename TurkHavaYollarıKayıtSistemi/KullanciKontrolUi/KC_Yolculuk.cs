@@ -43,9 +43,9 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 
         private void btnYolculukEkle_Click(object sender, EventArgs e)
         {
-
+            //Yolculuk Ekle kodu
         }
-
+        
         private void KC_Yolculuk_Load(object sender, EventArgs e)
         {
             //tabloyu ekrana yazmak
@@ -60,6 +60,25 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             //yolculuk sayisi toplayip label icinde yazmak
             SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Yolculuk",db);
             labelYolculukSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
+        }
+
+        private void btnYolculukSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(dialogResult == DialogResult.Yes)
+            {
+                //-----------------------silmek
+            }
+        }
+        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak jayit siliniyor
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnYolculukSil.Visible = true;
+            int index = dataGridView1.CurrentCell.RowIndex;
+            object value = dataGridView1.Rows[index].Cells[0].Value;
+            int SelectedCell = (int)value;
+            ConstValue.GlobalClickedCell = SelectedCell;
+
         }
     }
 }

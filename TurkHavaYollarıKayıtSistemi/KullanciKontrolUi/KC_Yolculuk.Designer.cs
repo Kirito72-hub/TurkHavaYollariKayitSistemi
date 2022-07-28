@@ -67,6 +67,8 @@
             this.btnYolculukSil.TabIndex = 1;
             this.btnYolculukSil.Text = "Yolculuk Sil";
             this.btnYolculukSil.UseVisualStyleBackColor = false;
+            this.btnYolculukSil.Visible = false;
+            this.btnYolculukSil.Click += new System.EventHandler(this.btnYolculukSil_Click);
             // 
             // btnYolculukEkle
             // 
@@ -134,6 +136,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1408, 531);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // tHYDataSet
             // 
