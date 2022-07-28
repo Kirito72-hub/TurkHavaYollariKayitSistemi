@@ -56,7 +56,8 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void btnYolculuk_Click(object sender, EventArgs e)
         {
-
+            KC_Yolculuk Yolculik = new KC_Yolculuk();
+            addControls(Yolculik);
         }
     }
 }
