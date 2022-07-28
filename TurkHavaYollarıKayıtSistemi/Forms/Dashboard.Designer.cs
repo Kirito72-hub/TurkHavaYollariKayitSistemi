@@ -41,14 +41,14 @@
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Banner = new System.Windows.Forms.Panel();
+            this.UpperBanner = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SideBanner.SuspendLayout();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Banner.SuspendLayout();
+            this.UpperBanner.SuspendLayout();
             this.SuspendLayout();
             // 
             // SideBanner
@@ -177,15 +177,15 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // Banner
+            // UpperBanner
             // 
-            this.Banner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
-            this.Banner.Controls.Add(this.labelTime);
-            this.Banner.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Banner.Location = new System.Drawing.Point(283, 110);
-            this.Banner.Name = "Banner";
-            this.Banner.Size = new System.Drawing.Size(1501, 118);
-            this.Banner.TabIndex = 1;
+            this.UpperBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
+            this.UpperBanner.Controls.Add(this.labelTime);
+            this.UpperBanner.Dock = System.Windows.Forms.DockStyle.Top;
+            this.UpperBanner.Location = new System.Drawing.Point(283, 110);
+            this.UpperBanner.Name = "UpperBanner";
+            this.UpperBanner.Size = new System.Drawing.Size(1501, 118);
+            this.UpperBanner.TabIndex = 1;
             // 
             // labelTime
             // 
@@ -219,7 +219,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1784, 861);
             this.Controls.Add(this.panelControl);
-            this.Controls.Add(this.Banner);
+            this.Controls.Add(this.UpperBanner);
             this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.SideBanner);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -231,8 +231,8 @@
             this.SideBanner.PerformLayout();
             this.TopPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Banner.ResumeLayout(false);
-            this.Banner.PerformLayout();
+            this.UpperBanner.ResumeLayout(false);
+            this.UpperBanner.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,7 +241,7 @@
 
         private System.Windows.Forms.Panel SideBanner;
         private System.Windows.Forms.Panel TopPanel;
-        private System.Windows.Forms.Panel Banner;
+        private System.Windows.Forms.Panel UpperBanner;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnKullanci;
         private System.Windows.Forms.Button btnUcak;

@@ -17,12 +17,12 @@ namespace TurkHavaYollarıKayıtSistemi
         {
             InitializeComponent();
         }
-
+        //Kullanci adini Merhaba! den sonra yzilmasi
         private void Dashboard_Load(object sender, EventArgs e)
         {
             labelKullanciAdi.Text = ConstValue.KullanciAdi;
         }
-
+        //getirlecek control ui'n boyutlari duenletecek fonksiyon
         private void addControls(UserControl uc)
         {
             panelControl.Controls.Clear();
@@ -35,14 +35,14 @@ namespace TurkHavaYollarıKayıtSistemi
         {
             Application.Exit();
         }
-
+        //AnaSayfa butunununa basildiginda control ui getirmek (AnaSayfa.cs)
         private void button1_Click(object sender, EventArgs e)
         {
             KC_AnaSayfa AnaSayfa = new KC_AnaSayfa();
             addControls(AnaSayfa);
             
         }
-
+       //timer saat,dakika gostermesi icin ayarlama
         private void timer1_Tick(object sender, EventArgs e)
         {
             DateTime dt = DateTime.Now;
@@ -53,7 +53,7 @@ namespace TurkHavaYollarıKayıtSistemi
         {
 
         }
-
+        //Yolculuk butunununa basildiginda control ui getirmek (Yolculuk.cs)
         private void btnYolculuk_Click(object sender, EventArgs e)
         {
             KC_Yolculuk Yolculik = new KC_Yolculuk();

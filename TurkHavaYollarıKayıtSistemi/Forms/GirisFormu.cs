@@ -23,6 +23,7 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //butonun arka rengini ddegitirmek icin
             button1.BackColor = Color.FromArgb(232, 25, 50);
         }
         
@@ -71,7 +72,7 @@ namespace TurkHavaYollarıKayıtSistemi
         {
             this.Close();
         }
-
+        //X butuno pencere kapatmak icin
         private void button2_Click_1(object sender, EventArgs e)
         {
             Application.Exit();
