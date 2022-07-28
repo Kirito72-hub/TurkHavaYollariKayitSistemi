@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstaValue.cs" />
+    <Compile Include="ConstValue.cs" />
     <Compile Include="Forms\GirisFormu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +104,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="KullanciKontrolUi\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

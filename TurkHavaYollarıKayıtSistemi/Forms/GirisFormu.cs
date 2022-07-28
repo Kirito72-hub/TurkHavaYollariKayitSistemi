@@ -56,7 +56,7 @@ namespace TurkHavaYollarıKayıtSistemi
             if (dt.Rows[0][0].ToString() == "1")
             {
                 //Sifre dogru ise
-                ConstaValue.KullanciAdi = txtboxKullanci.Text;
+                ConstValue.KullanciAdi = txtboxKullanci.Text;
                 this.Hide();
                 Dashboard dash = new Dashboard();
                 dash.Show();

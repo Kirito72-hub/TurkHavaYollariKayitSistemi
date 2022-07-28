@@ -20,8 +20,16 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            labelKullanciAdi.Text = ConstaValue.KullanciAdi;
+            labelKullanciAdi.Text = ConstValue.KullanciAdi;
         }
+
+       /* private void addControls(UserControl uc)
+        {
+            panelControl.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            panelControl.Controls.Add(uc);
+            uc.BringToFront();
+        }*/
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -29,6 +37,17 @@ namespace TurkHavaYollarıKayıtSistemi
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            this.labelTime.Text = dt.ToString("HH:mm");
+        }
+
+        private void labelTime_Click(object sender, EventArgs e)
         {
 
         }

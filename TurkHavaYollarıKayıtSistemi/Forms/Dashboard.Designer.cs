@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.SideBanner = new System.Windows.Forms.Panel();
+            this.TopPanel = new System.Windows.Forms.Panel();
+            this.Banner = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelKullanciAdi = new System.Windows.Forms.Label();
             this.btnAnaSayfa = new System.Windows.Forms.Button();
@@ -41,46 +42,51 @@
             this.btnKullanci = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelControl = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.labelTime = new System.Windows.Forms.Label();
+            this.SideBanner.SuspendLayout();
+            this.TopPanel.SuspendLayout();
+            this.Banner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // SideBanner
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
-            this.panel1.Controls.Add(this.btnKullanci);
-            this.panel1.Controls.Add(this.btnUcak);
-            this.panel1.Controls.Add(this.btnYolcu);
-            this.panel1.Controls.Add(this.btnYolculuk);
-            this.panel1.Controls.Add(this.btnAnaSayfa);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.labelKullanciAdi);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.ForeColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 861);
-            this.panel1.TabIndex = 0;
+            this.SideBanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
+            this.SideBanner.Controls.Add(this.btnKullanci);
+            this.SideBanner.Controls.Add(this.btnUcak);
+            this.SideBanner.Controls.Add(this.btnYolcu);
+            this.SideBanner.Controls.Add(this.btnYolculuk);
+            this.SideBanner.Controls.Add(this.btnAnaSayfa);
+            this.SideBanner.Controls.Add(this.label1);
+            this.SideBanner.Controls.Add(this.labelKullanciAdi);
+            this.SideBanner.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SideBanner.ForeColor = System.Drawing.Color.White;
+            this.SideBanner.Location = new System.Drawing.Point(0, 0);
+            this.SideBanner.Name = "SideBanner";
+            this.SideBanner.Size = new System.Drawing.Size(283, 861);
+            this.SideBanner.TabIndex = 0;
             // 
-            // panel2
+            // TopPanel
             // 
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(283, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1501, 110);
-            this.panel2.TabIndex = 0;
+            this.TopPanel.Controls.Add(this.button6);
+            this.TopPanel.Controls.Add(this.pictureBox1);
+            this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TopPanel.Location = new System.Drawing.Point(283, 0);
+            this.TopPanel.Name = "TopPanel";
+            this.TopPanel.Size = new System.Drawing.Size(1501, 110);
+            this.TopPanel.TabIndex = 0;
             // 
-            // panel3
+            // Banner
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(283, 110);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1501, 118);
-            this.panel3.TabIndex = 1;
+            this.Banner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
+            this.Banner.Controls.Add(this.labelTime);
+            this.Banner.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Banner.Location = new System.Drawing.Point(283, 110);
+            this.Banner.Name = "Banner";
+            this.Banner.Size = new System.Drawing.Size(1501, 118);
+            this.Banner.TabIndex = 1;
             // 
             // pictureBox1
             // 
@@ -95,7 +101,7 @@
             // 
             this.labelKullanciAdi.AutoSize = true;
             this.labelKullanciAdi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelKullanciAdi.Location = new System.Drawing.Point(112, 38);
+            this.labelKullanciAdi.Location = new System.Drawing.Point(126, 37);
             this.labelKullanciAdi.Name = "labelKullanciAdi";
             this.labelKullanciAdi.Size = new System.Drawing.Size(124, 29);
             this.labelKullanciAdi.TabIndex = 0;
@@ -174,28 +180,57 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(3, 38);
+            this.label1.Location = new System.Drawing.Point(17, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Merhaba!";
+            // 
+            // panelControl
+            // 
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl.Location = new System.Drawing.Point(283, 228);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1501, 633);
+            this.panelControl.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.labelTime.Location = new System.Drawing.Point(1390, 32);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(99, 42);
+            this.labelTime.TabIndex = 0;
+            this.labelTime.Text = "00:00";
+            this.labelTime.Click += new System.EventHandler(this.labelTime_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1784, 861);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelControl);
+            this.Controls.Add(this.Banner);
+            this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.SideBanner);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.SideBanner.ResumeLayout(false);
+            this.SideBanner.PerformLayout();
+            this.TopPanel.ResumeLayout(false);
+            this.Banner.ResumeLayout(false);
+            this.Banner.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -203,9 +238,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel SideBanner;
+        private System.Windows.Forms.Panel TopPanel;
+        private System.Windows.Forms.Panel Banner;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnKullanci;
         private System.Windows.Forms.Button btnUcak;
@@ -215,5 +250,8 @@
         private System.Windows.Forms.Label labelKullanciAdi;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelControl;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label labelTime;
     }
 }
