@@ -40,7 +40,7 @@
             this.btnYolcu = new System.Windows.Forms.Button();
             this.btnUcak = new System.Windows.Forms.Button();
             this.btnKullanci = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -70,7 +70,7 @@
             // 
             // TopPanel
             // 
-            this.TopPanel.Controls.Add(this.button6);
+            this.TopPanel.Controls.Add(this.btnClose);
             this.TopPanel.Controls.Add(this.pictureBox1);
             this.TopPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.TopPanel.Location = new System.Drawing.Point(283, 0);
@@ -163,18 +163,18 @@
             this.btnKullanci.Text = "Kullancı";
             this.btnKullanci.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnClose
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(1465, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(36, 34);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "X";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnClose.BackColor = System.Drawing.Color.White;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnClose.Location = new System.Drawing.Point(1465, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(36, 34);
+            this.btnClose.TabIndex = 8;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button6_Click);
             // 
             // label1
             // 
@@ -248,7 +248,7 @@
         private System.Windows.Forms.Button btnYolculuk;
         private System.Windows.Forms.Button btnAnaSayfa;
         private System.Windows.Forms.Label labelKullanciAdi;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelControl;
         private System.Windows.Forms.Timer timer1;
