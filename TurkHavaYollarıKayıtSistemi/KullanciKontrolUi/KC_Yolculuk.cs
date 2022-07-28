@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TurkHavaYollarıKayıtSistemi.Forms;
 
 namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 {
@@ -56,7 +57,13 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 
         private void btnYolculukEkle_Click(object sender, EventArgs e)
         {
-            //Yolculuk Ekle kodu
+            //Yolculuk Ekle kodu formu cagirmak
+            using (YolculukEkle YolculukEkle = new YolculukEkle())
+            {
+                YolculukEkle.ShowDialog();
+                this.OnLoad(e);
+            }
+
         }
         
         private void KC_Yolculuk_Load(object sender, EventArgs e)
