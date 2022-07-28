@@ -63,9 +63,9 @@
             // 
             this.btnYolculukSil.BackColor = System.Drawing.Color.SlateGray;
             this.btnYolculukSil.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYolculukSil.Location = new System.Drawing.Point(196, 0);
+            this.btnYolculukSil.Location = new System.Drawing.Point(196, 3);
             this.btnYolculukSil.Name = "btnYolculukSil";
-            this.btnYolculukSil.Size = new System.Drawing.Size(196, 69);
+            this.btnYolculukSil.Size = new System.Drawing.Size(196, 66);
             this.btnYolculukSil.TabIndex = 1;
             this.btnYolculukSil.Text = "Yolculuk Sil";
             this.btnYolculukSil.UseVisualStyleBackColor = false;
@@ -76,9 +76,9 @@
             // 
             this.btnYolculukEkle.BackColor = System.Drawing.Color.SlateGray;
             this.btnYolculukEkle.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnYolculukEkle.Location = new System.Drawing.Point(3, 0);
+            this.btnYolculukEkle.Location = new System.Drawing.Point(3, 3);
             this.btnYolculukEkle.Name = "btnYolculukEkle";
-            this.btnYolculukEkle.Size = new System.Drawing.Size(196, 69);
+            this.btnYolculukEkle.Size = new System.Drawing.Size(196, 66);
             this.btnYolculukEkle.TabIndex = 1;
             this.btnYolculukEkle.Text = "Yolculuk Ekle";
             this.btnYolculukEkle.UseVisualStyleBackColor = false;

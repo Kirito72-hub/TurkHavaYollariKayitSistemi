@@ -38,9 +38,8 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
             dataGridView1.Columns[6].HeaderText = "Varış Zamanı";
             dataGridView1.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dataGridView1.Columns[7].HeaderText = "Üçak Modeli";
+            dataGridView1.Columns[7].HeaderText = "Uçak Modeli";
             dataGridView1.Columns[7].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
-
             dataGridView1.AutoResizeColumnHeadersHeight();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ClearSelection();
@@ -64,7 +63,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             //tabloyu ekrana yazmak
             db.Open();
-            SqlDataAdapter sorgu = new SqlDataAdapter("select * From Tbl_Yolculuk",db);
+            SqlDataAdapter sorgu = new SqlDataAdapter("Select YolculukID,Nerden,Nereye,GidisTarihi,GidisZamani,VarisTarihi,VarisZamani,UcakModeli From Tbl_Yolculuk INNER JOIN Tbl_Ucak ON Tbl_Yolculuk.UcakID=Tbl_Ucak.UcakID", db);
             DataTable dt = new DataTable();
             sorgu.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -92,7 +91,6 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             object value = dataGridView1.Rows[index].Cells[0].Value;
             int SelectedCell = (int)value;
             ConstValue.GlobalClickedCell = SelectedCell;
-
         }
     }
 }
