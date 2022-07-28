@@ -80,6 +80,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             //yolculuk sayisi toplayip label icinde yazmak
             SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Yolculuk",db);
             labelYolculukSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
+            db.Close();
         }
 
         private void btnYolculukSil_Click(object sender, EventArgs e)
