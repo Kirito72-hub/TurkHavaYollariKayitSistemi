@@ -22,7 +22,7 @@ namespace TurkHavaYollarıKayıtSistemi
         {
             labelKullanciAdi.Text = ConstValue.KullanciAdi;
         }
-        //getirlecek control ui'n boyutlari duenletecek fonksiyon
+        //getirlecek control ui'n boyutlari duzenletecek fonksiyon
         private void addControls(UserControl uc)
         {
             panelControl.Controls.Clear();
@@ -56,8 +56,31 @@ namespace TurkHavaYollarıKayıtSistemi
         //Yolculuk butunununa basildiginda control ui getirmek (Yolculuk.cs)
         private void btnYolculuk_Click(object sender, EventArgs e)
         {
-            KC_Yolculuk Yolculik = new KC_Yolculuk();
-            addControls(Yolculik);
+            KC_Yolculuk Yolculuk = new KC_Yolculuk();
+            addControls(Yolculuk);
+        }
+
+        private void btnYolcu_Click(object sender, EventArgs e)
+        {
+            KC_Yolcu Yolcu = new KC_Yolcu();
+            addControls(Yolcu);
+        }
+
+        private void btnUcak_Click(object sender, EventArgs e)
+        {
+            KC_Ucak Ucak = new KC_Ucak();
+            addControls(Ucak);
+        }
+
+        private void btnKullanci_Click(object sender, EventArgs e)
+        {
+            KC_Kullanci Kullanci = new KC_Kullanci();
+            addControls(Kullanci);
+        }
+
+        private void labelKullanciAdi_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
