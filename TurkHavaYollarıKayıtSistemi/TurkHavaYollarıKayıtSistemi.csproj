@@ -75,12 +75,6 @@
     <Compile Include="KullanciKontrolUi\KC_AnaSayfa.Designer.cs">
       <DependentUpon>KC_AnaSayfa.cs</DependentUpon>
     </Compile>
-    <Compile Include="KullanciKontrolUi\KC_Yolculuk.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="KullanciKontrolUi\KC_Yolculuk.Designer.cs">
-      <DependentUpon>KC_Yolculuk.cs</DependentUpon>
-    </Compile>
     <Compile Include="KullanciKontrolUi\KC_Kullanci.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -98,6 +92,12 @@
     </Compile>
     <Compile Include="KullanciKontrolUi\KC_Yolcu.Designer.cs">
       <DependentUpon>KC_Yolcu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullanciKontrolUi\KC_Yolculuk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KullanciKontrolUi\KC_Yolculuk.Designer.cs">
+      <DependentUpon>KC_Yolculuk.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,9 +118,6 @@
     <EmbeddedResource Include="KullanciKontrolUi\KC_AnaSayfa.resx">
       <DependentUpon>KC_AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KullanciKontrolUi\KC_Yolculuk.resx">
-      <DependentUpon>KC_Yolculuk.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="KullanciKontrolUi\KC_Kullanci.resx">
       <DependentUpon>KC_Kullanci.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KullanciKontrolUi\KC_Yolcu.resx">
       <DependentUpon>KC_Yolcu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullanciKontrolUi\KC_Yolculuk.resx">
+      <DependentUpon>KC_Yolculuk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

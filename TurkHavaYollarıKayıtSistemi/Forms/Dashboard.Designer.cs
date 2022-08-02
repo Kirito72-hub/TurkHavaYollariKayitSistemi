@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.SideBanner = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnKullanci = new System.Windows.Forms.Button();
             this.btnUcak = new System.Windows.Forms.Button();
             this.btnYolcu = new System.Windows.Forms.Button();
@@ -39,20 +40,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelKullanciAdi = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UpperBanner = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.panelControl = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tableAdapterManager1 = new TurkHavaYollarıKayıtSistemi.THYDataSetTableAdapters.TableAdapterManager();
-            this.button1 = new System.Windows.Forms.Button();
             this.SideBanner.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.TopPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.UpperBanner.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // SideBanner
@@ -72,6 +72,16 @@
             this.SideBanner.Name = "SideBanner";
             this.SideBanner.Size = new System.Drawing.Size(283, 900);
             this.SideBanner.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(75, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(133, 138);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
             // 
             // btnKullanci
             // 
@@ -182,7 +192,7 @@
             this.labelKullanciAdi.Name = "labelKullanciAdi";
             this.labelKullanciAdi.Size = new System.Drawing.Size(124, 29);
             this.labelKullanciAdi.TabIndex = 0;
-            this.labelKullanciAdi.Text = "KullanciAdi";
+            this.labelKullanciAdi.Text = "KullancıAdı";
             this.labelKullanciAdi.Click += new System.EventHandler(this.labelKullanciAdi_Click);
             // 
             // TopPanel
@@ -196,6 +206,21 @@
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.Size = new System.Drawing.Size(1517, 110);
             this.TopPanel.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(1444, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(33, 28);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnClose
             // 
@@ -258,16 +283,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(75, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(133, 138);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            // 
             // tableAdapterManager1
             // 
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
@@ -278,21 +293,6 @@
             this.tableAdapterManager1.Tbl_YolcuTableAdapter = null;
             this.tableAdapterManager1.Tbl_YolcuYolculukTableAdapter = null;
             this.tableAdapterManager1.UpdateOrder = TurkHavaYollarıKayıtSistemi.THYDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(1444, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 28);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button6_Click);
             // 
             // Dashboard
             // 
@@ -310,11 +310,11 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.SideBanner.ResumeLayout(false);
             this.SideBanner.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.TopPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.UpperBanner.ResumeLayout(false);
             this.UpperBanner.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
