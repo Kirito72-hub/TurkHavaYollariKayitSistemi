@@ -59,19 +59,19 @@ namespace TurkHavaYollarıKayıtSistemi
             KC_Yolculuk Yolculuk = new KC_Yolculuk();
             addControls(Yolculuk);
         }
-
+        //Yolcu butunununa basildiginda control ui getirmek (Yolcu.cs)
         private void btnYolcu_Click(object sender, EventArgs e)
         {
             KC_Yolcu Yolcu = new KC_Yolcu();
             addControls(Yolcu);
         }
-
+        //Ucak butunununa basildiginda control ui getirmek (Ucak.cs)
         private void btnUcak_Click(object sender, EventArgs e)
         {
             KC_Ucak Ucak = new KC_Ucak();
             addControls(Ucak);
         }
-
+        //Kullanci butunununa basildiginda control ui getirmek (Kullanci.cs)
         private void btnKullanci_Click(object sender, EventArgs e)
         {
             KC_Kullanci Kullanci = new KC_Kullanci();
@@ -81,6 +81,11 @@ namespace TurkHavaYollarıKayıtSistemi
         private void labelKullanciAdi_Click(object sender, EventArgs e)
         {
 
+        }
+        //minimize butunu
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
