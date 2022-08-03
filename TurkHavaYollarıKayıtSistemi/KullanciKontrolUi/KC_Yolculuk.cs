@@ -82,23 +82,33 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             labelYolculukSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
             db.Close();
         }
-
+        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
+        int Scell;
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnYolculukSil.Visible = true;
+            int index = dataGridView1.CurrentCell.RowIndex;
+            object value = dataGridView1.Rows[index].Cells[0].Value;
+            Scell = (int)value;
+        }
         private void btnYolculukSil_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if(dialogResult == DialogResult.Yes)
             {
-                //-----------------------silmek
+                db.Open();
+                SqlCommand sorguSil = new SqlCommand("delete from Tbl_Yolculuk where YolculukID=@s1", db);
+                sorguSil.Parameters.AddWithValue("@s1", Scell);
+                sorguSil.ExecuteNonQuery();
+                db.Close();
+                MessageBox.Show("Yolculuk Kaydı Silindi");
+                this.OnLoad(e);
             }
         }
-        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak jayit siliniyor
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnYolculukSil.Visible = true;
-            int index = dataGridView1.CurrentCell.RowIndex;
-            object value = dataGridView1.Rows[index].Cells[0].Value;
-            int SelectedCell = (int)value;
-            ConstValue.GlobalClickedCell = SelectedCell;
+
         }
     }
 }

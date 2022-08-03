@@ -38,14 +38,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labeltxt = new System.Windows.Forms.Label();
             this.labelYolculukSayisi = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tHYDataSet = new TurkHavaYollarıKayıtSistemi.THYDataSet();
             this.tHYDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.upperPanel.SuspendLayout();
             this.lowerPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHYDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHYDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // upperPanel
@@ -129,8 +129,19 @@
             this.labelYolculukSayisi.TabIndex = 2;
             this.labelYolculukSayisi.Text = "00";
             // 
+            // tHYDataSet
+            // 
+            this.tHYDataSet.DataSetName = "THYDataSet";
+            this.tHYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tHYDataSetBindingSource
+            // 
+            this.tHYDataSetBindingSource.DataSource = this.tHYDataSet;
+            this.tHYDataSetBindingSource.Position = 0;
+            // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -151,19 +162,12 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 69);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(1408, 531);
             this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // tHYDataSet
-            // 
-            this.tHYDataSet.DataSetName = "THYDataSet";
-            this.tHYDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tHYDataSetBindingSource
-            // 
-            this.tHYDataSetBindingSource.DataSource = this.tHYDataSet;
-            this.tHYDataSetBindingSource.Position = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // KC_Yolculuk
             // 
@@ -178,9 +182,9 @@
             this.upperPanel.ResumeLayout(false);
             this.lowerPanel.ResumeLayout(false);
             this.lowerPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHYDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHYDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -194,8 +198,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labeltxt;
         private System.Windows.Forms.Label labelYolculukSayisi;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource tHYDataSetBindingSource;
         private THYDataSet tHYDataSet;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
