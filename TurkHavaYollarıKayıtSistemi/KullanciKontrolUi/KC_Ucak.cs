@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using TurkHavaYollarıKayıtSistemi.Forms;
 
 namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 {
@@ -64,7 +65,12 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         }
         private void btnUcakEkle_Click(object sender, EventArgs e)
         {
-            //Yeni Form yaptiktan sonra
+            //Ucak Ekle kodu formu cagirmak
+            using (UcakEkle UcakEkle = new UcakEkle())
+            {
+                UcakEkle.ShowDialog();
+                this.OnLoad(e);
+            }
         }
         //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
         int Scell;
