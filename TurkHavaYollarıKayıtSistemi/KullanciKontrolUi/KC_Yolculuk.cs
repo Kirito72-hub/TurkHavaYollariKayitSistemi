@@ -19,7 +19,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             InitializeComponent();
         }
         //sql baglantisini kurmak
-        SqlConnection db = new SqlConnection("Data Source=LAPTOP-SCMK2VA2\\MSSQLSERVER01;Initial Catalog=THY;Integrated Security=True");
+        SqlConnection db = new SqlConnection("Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True");
 
         //datagridview1 headers basliklari degistirmek
         private void FillDataGridView()
@@ -70,7 +70,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             //tabloyu ekrana yazmak
             db.Open();
-            SqlDataAdapter sorgu = new SqlDataAdapter("Select YolculukID,Nerden,Nereye,GidisTarihi,GidisZamani,VarisTarihi,VarisZamani,UcakModeli From Tbl_Yolculuk INNER JOIN Tbl_Ucak ON Tbl_Yolculuk.UcakID=Tbl_Ucak.UcakID", db);
+            SqlDataAdapter sorgu = new SqlDataAdapter("Select YolculukID,Nerden,Nereye,GidisTarihi,GidisSaati,VarisTarihi,VarisSaati,UcakModeli From Tbl_Yolculuk INNER JOIN Tbl_Ucak ON Tbl_Yolculuk.UcakID=Tbl_Ucak.UcakID", db);
             DataTable dt = new DataTable();
             sorgu.Fill(dt);
             dataGridView1.DataSource = dt;

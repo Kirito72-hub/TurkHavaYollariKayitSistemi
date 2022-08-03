@@ -17,7 +17,7 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
         {
             InitializeComponent();
         }
-        SqlConnection db = new SqlConnection("Data Source=LAPTOP-SCMK2VA2\\MSSQLSERVER01;Initial Catalog=THY;Integrated Security=True");
+        SqlConnection db = new SqlConnection("Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True");
         private void YolculukEkle_Load(object sender, EventArgs e)
         {
             //Ucak modelleri databaseten alip comboboxa atmak
