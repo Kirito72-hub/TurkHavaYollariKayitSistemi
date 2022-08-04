@@ -59,7 +59,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             UpdateFont();
 
             //yolculuk sayisi toplayip label icinde yazmak
-            SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Yolculuk", db);
+            SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Ucak", db);
             labelUcakSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
             db.Close();
         }

@@ -58,6 +58,7 @@ namespace TurkHavaYollarıKayıtSistemi
             {
                 //Sifre dogru ise
                 ConstValue.KullanciAdi = txtboxKullanci.Text;
+                ConstValue.KullanciSifre = txtboxSifre.Text;
                 this.Hide();
                 Dashboard dash = new Dashboard();
                 dash.Show();

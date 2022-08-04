@@ -10,6 +10,7 @@ namespace TurkHavaYollarıKayıtSistemi
     {
         //Kullanci adini alan degisken
         public static string KullanciAdi { get; set; }
+        public static string KullanciSifre { get; set; }
         public static int GlobalClickedCell { get; set; }
     }
 }

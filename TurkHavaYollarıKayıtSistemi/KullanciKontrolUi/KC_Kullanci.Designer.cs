@@ -162,6 +162,7 @@
             this.Controls.Add(this.upperPanel);
             this.Name = "KC_Kullanci";
             this.Size = new System.Drawing.Size(1408, 669);
+            this.Load += new System.EventHandler(this.KC_Kullanci_Load);
             this.upperPanel.ResumeLayout(false);
             this.lowerPanel.ResumeLayout(false);
             this.lowerPanel.PerformLayout();

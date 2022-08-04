@@ -63,6 +63,12 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\KullanciEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\KullanciEkle.Designer.cs">
+      <DependentUpon>KullanciEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UcakEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\GirisFormu.resx">
       <DependentUpon>GirisFormu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\KullanciEkle.resx">
+      <DependentUpon>KullanciEkle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\UcakEkle.resx">
       <DependentUpon>UcakEkle.cs</DependentUpon>
