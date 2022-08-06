@@ -26,7 +26,7 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
             else if (txtBoxSoyad.Text == "") { MessageBox.Show("Yolcu Soyadını yazınız!"); flick = false; }
             else if (txtBoxEposta.Text == "") { MessageBox.Show("Eposta yazınız!"); flick = false; }
             else if (txtBoxTel.Text == "") { MessageBox.Show("11 haneli telefon numerası yazınız!"); flick = false; }
-            else if (txtBoxTel.TextLength != 11) { MessageBox.Show("11 haneli telefon numerası yazınız!"); flick = false; }
+            else if (txtBoxTel.TextLength != 10) { MessageBox.Show("10 haneli telefon numerası yazınız!"); flick = false; }
 
             if (flick == true)
             {

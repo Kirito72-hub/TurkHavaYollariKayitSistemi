@@ -20,7 +20,7 @@ namespace TurkHavaYollarıKayıtSistemi
         //Kullanci adini Merhaba! den sonra yzilmasi
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            labelKullanciAdi.Text = ConstValue.KullanciAdi;
+            labelKullanciAdi.Text = "Merhaba! " + ConstValue.KullanciAdi;
         }
         //getirlecek control ui'n boyutlari duzenletecek fonksiyon
         private void addControls(UserControl uc)
