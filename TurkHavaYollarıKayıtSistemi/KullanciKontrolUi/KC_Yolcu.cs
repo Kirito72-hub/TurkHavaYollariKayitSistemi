@@ -26,17 +26,21 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             dataGridView1.Columns[0].HeaderText = "Yolcu No";
             dataGridView1.Columns[0].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridView1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[0].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[1].HeaderText = "Ad";
-            dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[1].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[1].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[2].HeaderText = "Soyad";
-            dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[2].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[3].HeaderText = "E-posta";
-            dataGridView1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[3].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[3].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[4].HeaderText = "Telefon";
-            dataGridView1.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[4].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridView1.Columns[4].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             dataGridView1.Columns[5].HeaderText = "Kayıt Tarihi";
-            dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dataGridView1.Columns[5].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.AutoResizeColumnHeadersHeight();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ClearSelection();
@@ -62,7 +66,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             UpdateFont();
 
             //yolculuk sayisi toplayip label icinde yazmak
-            SqlCommand YolcuSayisi = new SqlCommand("Select count(*) from Tbl_Ucak", db);
+            SqlCommand YolcuSayisi = new SqlCommand("Select count(*) from Tbl_Yolcu", db);
             labelYolcuSayisi.Text = YolcuSayisi.ExecuteScalar().ToString();
             db.Close();
         }
@@ -79,10 +83,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         int Scell;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnYolcuSil.Visible = true;
-            int index = dataGridView1.CurrentCell.RowIndex;
-            object value = dataGridView1.Rows[index].Cells[0].Value;
-            Scell = (int)value;
+            
         }
         //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
         private void btnYolcuSil_Click(object sender, EventArgs e)
@@ -98,6 +99,14 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
                 MessageBox.Show("Yolcu Kaydı Silindi");
                 this.OnLoad(e);
             }
+        }
+
+        private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            btnYolcuSil.Visible = true;
+            int index = dataGridView1.CurrentCell.RowIndex;
+            object value = dataGridView1.Rows[index].Cells[0].Value;
+            Scell = (int)value;
         }
     }
 }

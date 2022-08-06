@@ -136,6 +136,9 @@
     <EmbeddedResource Include="Forms\UcakEkle.resx">
       <DependentUpon>UcakEkle.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YolcuEkle.resx">
+      <DependentUpon>YolcuEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\YolculukEkle.resx">
       <DependentUpon>YolculukEkle.cs</DependentUpon>
     </EmbeddedResource>
