@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnKaydet = new System.Windows.Forms.Button();
-            this.btnIptal = new System.Windows.Forms.Button();
-            this.cbNerden = new System.Windows.Forms.ComboBox();
-            this.cbNereye = new System.Windows.Forms.ComboBox();
-            this.dtpKalkisTarihi = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dtpVarisTarihi = new System.Windows.Forms.DateTimePicker();
-            this.cbUcakID = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.dtpVarisSaati = new System.Windows.Forms.DateTimePicker();
+            this.dtpVarisTarihi = new System.Windows.Forms.DateTimePicker();
             this.dtpKalkisSaati = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
+            this.dtpKalkisTarihi = new System.Windows.Forms.DateTimePicker();
+            this.cbUcakID = new System.Windows.Forms.ComboBox();
+            this.cbNereye = new System.Windows.Forms.ComboBox();
+            this.cbNerden = new System.Windows.Forms.ComboBox();
+            this.btnIptal = new System.Windows.Forms.Button();
+            this.btnKaydet = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,29 +70,159 @@
             this.panel1.Size = new System.Drawing.Size(778, 642);
             this.panel1.TabIndex = 0;
             // 
-            // label4
+            // dtpVarisSaati
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(14, 209);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(176, 39);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Kalkış Tarihi";
+            this.dtpVarisSaati.CustomFormat = "HH:mm";
+            this.dtpVarisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpVarisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpVarisSaati.Location = new System.Drawing.Point(411, 315);
+            this.dtpVarisSaati.Name = "dtpVarisSaati";
+            this.dtpVarisSaati.ShowUpDown = true;
+            this.dtpVarisSaati.Size = new System.Drawing.Size(265, 43);
+            this.dtpVarisSaati.TabIndex = 4;
+            this.dtpVarisSaati.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
             // 
-            // btnKaydet
+            // dtpVarisTarihi
             // 
-            this.btnKaydet.FlatAppearance.BorderSize = 3;
-            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKaydet.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnKaydet.Location = new System.Drawing.Point(202, 540);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(184, 53);
-            this.btnKaydet.TabIndex = 1;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.dtpVarisTarihi.CustomFormat = "";
+            this.dtpVarisTarihi.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpVarisTarihi.Location = new System.Drawing.Point(411, 251);
+            this.dtpVarisTarihi.Name = "dtpVarisTarihi";
+            this.dtpVarisTarihi.Size = new System.Drawing.Size(265, 43);
+            this.dtpVarisTarihi.TabIndex = 4;
+            this.dtpVarisTarihi.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
+            // 
+            // dtpKalkisSaati
+            // 
+            this.dtpKalkisSaati.CustomFormat = "HH:mm";
+            this.dtpKalkisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpKalkisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpKalkisSaati.Location = new System.Drawing.Point(21, 315);
+            this.dtpKalkisSaati.Name = "dtpKalkisSaati";
+            this.dtpKalkisSaati.ShowUpDown = true;
+            this.dtpKalkisSaati.Size = new System.Drawing.Size(265, 43);
+            this.dtpKalkisSaati.TabIndex = 4;
+            // 
+            // dtpKalkisTarihi
+            // 
+            this.dtpKalkisTarihi.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpKalkisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpKalkisTarihi.Location = new System.Drawing.Point(21, 251);
+            this.dtpKalkisTarihi.Name = "dtpKalkisTarihi";
+            this.dtpKalkisTarihi.Size = new System.Drawing.Size(265, 43);
+            this.dtpKalkisTarihi.TabIndex = 4;
+            // 
+            // cbUcakID
+            // 
+            this.cbUcakID.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbUcakID.FormattingEnabled = true;
+            this.cbUcakID.Location = new System.Drawing.Point(21, 413);
+            this.cbUcakID.Name = "cbUcakID";
+            this.cbUcakID.Size = new System.Drawing.Size(265, 41);
+            this.cbUcakID.TabIndex = 3;
+            this.cbUcakID.Text = "Uçak Numerası";
+            // 
+            // cbNereye
+            // 
+            this.cbNereye.DropDownHeight = 200;
+            this.cbNereye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNereye.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbNereye.FormattingEnabled = true;
+            this.cbNereye.IntegralHeight = false;
+            this.cbNereye.Items.AddRange(new object[] {
+            "Adana Şakirpaşa Havalimanı",
+            "Ankara Esenboğa Havalimanı",
+            "Alanya Gazipaşa Havalimanı",
+            "Antalya Havalimanı",
+            "Balıkesir Kocaseyit Havalimanı",
+            "Bursa Yenişehir Havalimanı",
+            "Çanakkale Havalimanı",
+            "Denizli Çardak Havalimanı",
+            "Diyarbakır Havalimanı",
+            "Elazığ Havalimanı",
+            "Erzurum Havalimanı",
+            "Eskişehir Hasan Polatkan Havalimanı",
+            "Gaziantep Havalimanı",
+            "Hatay Havalimanı",
+            "Isparta Süleyman Demirel Havalimanı",
+            "İstanbul Havalimanı",
+            "İstanbul Sabiha Gökçen Havalimanı",
+            "İzmir Adnan Menderes Havalimanı",
+            "Kars Harakani Havalimanı",
+            "Kayseri Havalimanı",
+            "Kocaeli Cengiz Topel Havalimanı",
+            "Konya Havalimanı",
+            "Kütahya Zafer Havalimanı",
+            "Malatya Havalimanı",
+            "Muğla Dalaman Havalimanı",
+            "Muğla Milas-Bodrum Havalimanı",
+            "Nevşehir Kapadokya Havalimanı",
+            "Ordu Giresun Havalimanı",
+            "Samsun Çarşamba Havalimanı",
+            "Sinop Havalimanı",
+            "Sivas Nuri Demirağ Havalimanı",
+            "Şanlıurfa GAP Havalimanı",
+            "Tekirdağ Çorlu Havalimanı",
+            "Trabzon Havalimanı",
+            "Uşak Havalimanı",
+            "Van Ferit Melen Havalimanı",
+            "Zonguldak Çaycuma Havalimanı"});
+            this.cbNereye.Location = new System.Drawing.Point(411, 129);
+            this.cbNereye.Name = "cbNereye";
+            this.cbNereye.Size = new System.Drawing.Size(353, 41);
+            this.cbNereye.TabIndex = 3;
+            // 
+            // cbNerden
+            // 
+            this.cbNerden.BackColor = System.Drawing.Color.White;
+            this.cbNerden.DropDownHeight = 200;
+            this.cbNerden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNerden.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbNerden.FormattingEnabled = true;
+            this.cbNerden.IntegralHeight = false;
+            this.cbNerden.Items.AddRange(new object[] {
+            "Adana Şakirpaşa Havalimanı",
+            "Ankara Esenboğa Havalimanı",
+            "Alanya Gazipaşa Havalimanı",
+            "Antalya Havalimanı",
+            "Balıkesir Kocaseyit Havalimanı",
+            "Bursa Yenişehir Havalimanı",
+            "Çanakkale Havalimanı",
+            "Denizli Çardak Havalimanı",
+            "Diyarbakır Havalimanı",
+            "Elazığ Havalimanı",
+            "Erzurum Havalimanı",
+            "Eskişehir Hasan Polatkan Havalimanı",
+            "Gaziantep Havalimanı",
+            "Hatay Havalimanı",
+            "Isparta Süleyman Demirel Havalimanı",
+            "İstanbul Havalimanı",
+            "İstanbul Sabiha Gökçen Havalimanı",
+            "İzmir Adnan Menderes Havalimanı",
+            "Kars Harakani Havalimanı",
+            "Kayseri Havalimanı",
+            "Kocaeli Cengiz Topel Havalimanı",
+            "Konya Havalimanı",
+            "Kütahya Zafer Havalimanı",
+            "Malatya Havalimanı",
+            "Muğla Dalaman Havalimanı",
+            "Muğla Milas-Bodrum Havalimanı",
+            "Nevşehir Kapadokya Havalimanı",
+            "Ordu Giresun Havalimanı",
+            "Samsun Çarşamba Havalimanı",
+            "Sinop Havalimanı",
+            "Sivas Nuri Demirağ Havalimanı",
+            "Şanlıurfa GAP Havalimanı",
+            "Tekirdağ Çorlu Havalimanı",
+            "Trabzon Havalimanı",
+            "Uşak Havalimanı",
+            "Van Ferit Melen Havalimanı",
+            "Zonguldak Çaycuma Havalimanı"});
+            this.cbNerden.Location = new System.Drawing.Point(21, 129);
+            this.cbNerden.Name = "cbNerden";
+            this.cbNerden.Size = new System.Drawing.Size(353, 41);
+            this.cbNerden.TabIndex = 2;
             // 
             // btnIptal
             // 
@@ -108,234 +238,19 @@
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
             // 
-            // cbNerden
+            // btnKaydet
             // 
-            this.cbNerden.BackColor = System.Drawing.Color.White;
-            this.cbNerden.DropDownHeight = 200;
-            this.cbNerden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNerden.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbNerden.FormattingEnabled = true;
-            this.cbNerden.IntegralHeight = false;
-            this.cbNerden.Items.AddRange(new object[] {
-            "Adana",
-            "Adıyaman",
-            "Afyonkarahisar",
-            "Ağrı",
-            "Aksaray",
-            "Amasya",
-            "Ankara",
-            "Antalya",
-            "Ardahan",
-            "Artvin",
-            "Aydın",
-            "Balıkesir",
-            "Bartın",
-            "Batman",
-            "Bayburt",
-            "Bilecik",
-            "Bingöl",
-            "Bitlis",
-            "Bolu",
-            "Burdur",
-            "Bursa",
-            "Çanakkale",
-            "Çankırı",
-            "Çorum",
-            "Denizli",
-            "Diyarbakır",
-            "Düzce",
-            "Edirne",
-            "Elazığ",
-            "Erzincan",
-            "Erzurum",
-            "Eskişehir",
-            "Gaziantep",
-            "Giresun",
-            "Gümüşhane",
-            "Hakkâri",
-            "Hatay",
-            "Iğdır",
-            "Isparta",
-            "İstanbul",
-            "İzmir",
-            "Kahramanmaraş",
-            "Karabük",
-            "Karaman",
-            "Kars",
-            "Kastamonu",
-            "Kayseri",
-            "Kilis",
-            "Kırıkkale",
-            "Kırklareli",
-            "Kırşehir",
-            "Kocaeli",
-            "Konya",
-            "Kütahya",
-            "Malatya",
-            "Manisa",
-            "Mardin",
-            "Mersin",
-            "Muğla",
-            "Muş",
-            "Nevşehir",
-            "Niğde",
-            "Ordu",
-            "Osmaniye",
-            "Rize",
-            "Sakarya",
-            "Samsun",
-            "Şanlıurfa",
-            "Siirt",
-            "Sinop",
-            "Sivas",
-            "Şırnak",
-            "Tekirdağ",
-            "Tokat",
-            "Trabzon",
-            "Tunceli",
-            "Uşak",
-            "Van",
-            "Yalova",
-            "Yozgat",
-            "Zonguldak"});
-            this.cbNerden.Location = new System.Drawing.Point(21, 129);
-            this.cbNerden.Name = "cbNerden";
-            this.cbNerden.Size = new System.Drawing.Size(353, 41);
-            this.cbNerden.TabIndex = 2;
-            // 
-            // cbNereye
-            // 
-            this.cbNereye.DropDownHeight = 200;
-            this.cbNereye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNereye.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbNereye.FormattingEnabled = true;
-            this.cbNereye.IntegralHeight = false;
-            this.cbNereye.Items.AddRange(new object[] {
-            "Adana",
-            "Adıyaman",
-            "Afyonkarahisar",
-            "Ağrı",
-            "Aksaray",
-            "Amasya",
-            "Ankara",
-            "Antalya",
-            "Ardahan",
-            "Artvin",
-            "Aydın",
-            "Balıkesir",
-            "Bartın",
-            "Batman",
-            "Bayburt",
-            "Bilecik",
-            "Bingöl",
-            "Bitlis",
-            "Bolu",
-            "Burdur",
-            "Bursa",
-            "Çanakkale",
-            "Çankırı",
-            "Çorum",
-            "Denizli",
-            "Diyarbakır",
-            "Düzce",
-            "Edirne",
-            "Elazığ",
-            "Erzincan",
-            "Erzurum",
-            "Eskişehir",
-            "Gaziantep",
-            "Giresun",
-            "Gümüşhane",
-            "Hakkâri",
-            "Hatay",
-            "Iğdır",
-            "Isparta",
-            "İstanbul",
-            "İzmir",
-            "Kahramanmaraş",
-            "Karabük",
-            "Karaman",
-            "Kars",
-            "Kastamonu",
-            "Kayseri",
-            "Kilis",
-            "Kırıkkale",
-            "Kırklareli",
-            "Kırşehir",
-            "Kocaeli",
-            "Konya",
-            "Kütahya",
-            "Malatya",
-            "Manisa",
-            "Mardin",
-            "Mersin",
-            "Muğla",
-            "Muş",
-            "Nevşehir",
-            "Niğde",
-            "Ordu",
-            "Osmaniye",
-            "Rize",
-            "Sakarya",
-            "Samsun",
-            "Şanlıurfa",
-            "Siirt",
-            "Sinop",
-            "Sivas",
-            "Şırnak",
-            "Tekirdağ",
-            "Tokat",
-            "Trabzon",
-            "Tunceli",
-            "Uşak",
-            "Van",
-            "Yalova",
-            "Yozgat",
-            "Zonguldak"});
-            this.cbNereye.Location = new System.Drawing.Point(411, 129);
-            this.cbNereye.Name = "cbNereye";
-            this.cbNereye.Size = new System.Drawing.Size(353, 41);
-            this.cbNereye.TabIndex = 3;
-            // 
-            // dtpKalkisTarihi
-            // 
-            this.dtpKalkisTarihi.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpKalkisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpKalkisTarihi.Location = new System.Drawing.Point(21, 251);
-            this.dtpKalkisTarihi.Name = "dtpKalkisTarihi";
-            this.dtpKalkisTarihi.Size = new System.Drawing.Size(265, 43);
-            this.dtpKalkisTarihi.TabIndex = 4;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(404, 209);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 39);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Varış Tarihi";
-            // 
-            // dtpVarisTarihi
-            // 
-            this.dtpVarisTarihi.CustomFormat = "";
-            this.dtpVarisTarihi.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpVarisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpVarisTarihi.Location = new System.Drawing.Point(411, 251);
-            this.dtpVarisTarihi.Name = "dtpVarisTarihi";
-            this.dtpVarisTarihi.Size = new System.Drawing.Size(265, 43);
-            this.dtpVarisTarihi.TabIndex = 4;
-            this.dtpVarisTarihi.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
-            // 
-            // cbUcakID
-            // 
-            this.cbUcakID.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbUcakID.FormattingEnabled = true;
-            this.cbUcakID.Location = new System.Drawing.Point(21, 413);
-            this.cbUcakID.Name = "cbUcakID";
-            this.cbUcakID.Size = new System.Drawing.Size(265, 41);
-            this.cbUcakID.TabIndex = 3;
-            this.cbUcakID.Text = "Uçak Numerası";
+            this.btnKaydet.FlatAppearance.BorderSize = 3;
+            this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKaydet.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKaydet.ForeColor = System.Drawing.Color.LimeGreen;
+            this.btnKaydet.Location = new System.Drawing.Point(202, 540);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(184, 53);
+            this.btnKaydet.TabIndex = 1;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
             // label2
             // 
@@ -348,28 +263,25 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Yeni Yolculuk Ekle";
             // 
-            // dtpVarisSaati
+            // label5
             // 
-            this.dtpVarisSaati.CustomFormat = "HH:mm";
-            this.dtpVarisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpVarisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpVarisSaati.Location = new System.Drawing.Point(411, 315);
-            this.dtpVarisSaati.Name = "dtpVarisSaati";
-            this.dtpVarisSaati.ShowUpDown = true;
-            this.dtpVarisSaati.Size = new System.Drawing.Size(265, 43);
-            this.dtpVarisSaati.TabIndex = 4;
-            this.dtpVarisSaati.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(404, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 39);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nereye";
             // 
-            // dtpKalkisSaati
+            // label1
             // 
-            this.dtpKalkisSaati.CustomFormat = "HH:mm";
-            this.dtpKalkisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpKalkisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpKalkisSaati.Location = new System.Drawing.Point(21, 315);
-            this.dtpKalkisSaati.Name = "dtpKalkisSaati";
-            this.dtpKalkisSaati.ShowUpDown = true;
-            this.dtpKalkisSaati.Size = new System.Drawing.Size(265, 43);
-            this.dtpKalkisSaati.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(404, 209);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(163, 39);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Varış Tarihi";
             // 
             // label3
             // 
@@ -381,15 +293,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Nerden";
             // 
-            // label5
+            // label4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(404, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 39);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nereye";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(14, 209);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(176, 39);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Kalkış Tarihi";
             // 
             // YolculukEkle
             // 
