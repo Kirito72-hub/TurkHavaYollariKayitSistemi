@@ -75,17 +75,23 @@
     <Compile Include="Forms\UcakEkle.Designer.cs">
       <DependentUpon>UcakEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\YolcuEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YolcuEkle.Designer.cs">
+      <DependentUpon>YolcuEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\YolculukEkle.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\YolculukEkle.Designer.cs">
       <DependentUpon>YolculukEkle.cs</DependentUpon>
     </Compile>
-    <Compile Include="KullanciKontrolUi\KC_AnaSayfa.cs">
+    <Compile Include="KullanciKontrolUi\KC_BiletAl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="KullanciKontrolUi\KC_AnaSayfa.Designer.cs">
-      <DependentUpon>KC_AnaSayfa.cs</DependentUpon>
+    <Compile Include="KullanciKontrolUi\KC_BiletAl.Designer.cs">
+      <DependentUpon>KC_BiletAl.cs</DependentUpon>
     </Compile>
     <Compile Include="KullanciKontrolUi\KC_Kullanci.cs">
       <SubType>UserControl</SubType>
@@ -133,8 +139,8 @@
     <EmbeddedResource Include="Forms\YolculukEkle.resx">
       <DependentUpon>YolculukEkle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KullanciKontrolUi\KC_AnaSayfa.resx">
-      <DependentUpon>KC_AnaSayfa.cs</DependentUpon>
+    <EmbeddedResource Include="KullanciKontrolUi\KC_BiletAl.resx">
+      <DependentUpon>KC_BiletAl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="KullanciKontrolUi\KC_Kullanci.resx">
       <DependentUpon>KC_Kullanci.cs</DependentUpon>
