@@ -252,7 +252,7 @@
             this.labelTime.AutoSize = true;
             this.labelTime.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelTime.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelTime.Location = new System.Drawing.Point(1390, 32);
+            this.labelTime.Location = new System.Drawing.Point(1415, 32);
             this.labelTime.Name = "labelTime";
             this.labelTime.Size = new System.Drawing.Size(99, 42);
             this.labelTime.TabIndex = 0;
