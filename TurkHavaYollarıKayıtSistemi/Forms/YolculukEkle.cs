@@ -47,6 +47,7 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
             if (cbNerden.SelectedIndex == -1) { MessageBox.Show("Nerden Uçacağınızı seçiniz!"); flick = false; }
             else if(cbNereye.SelectedIndex == -1) { MessageBox.Show("Nereye Uçacağınızı seçiniz!"); flick = false; }
             else if (cbUcakID.SelectedIndex == -1) { MessageBox.Show("Nereye Uçacağınızı seçiniz!"); flick = false; }
+            else if (cbNerden.SelectedIndex == cbNereye.SelectedIndex) { MessageBox.Show("Nerden Nereye kutuları aynı girdi alamaz!"); flick = false; }
             if (flick == true)
             {
                 DialogResult dialogResult = MessageBox.Show("Kaydı eklemek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
