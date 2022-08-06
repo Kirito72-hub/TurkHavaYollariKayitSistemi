@@ -19,7 +19,7 @@ namespace TurkHavaYollarıKayıtSistemi
             InitializeComponent();
         }
         //databasein nesnesi olusturmasi
-        SqlConnection db = new SqlConnection("Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True");
+        SqlConnection db = new SqlConnection(ConstValue.connectionString);
 
         private void Form1_Load(object sender, EventArgs e)
         {

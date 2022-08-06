@@ -19,7 +19,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             InitializeComponent();
         }
         //sql baglantisini kurmak
-        SqlConnection db = new SqlConnection("Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True");
+        SqlConnection db = new SqlConnection(ConstValue.connectionString);
 
         private void KC_Kullanci_Load(object sender, EventArgs e)
         {

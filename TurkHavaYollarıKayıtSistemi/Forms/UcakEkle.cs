@@ -17,7 +17,7 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
         {
             InitializeComponent();
         }
-        SqlConnection db = new SqlConnection("Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True");
+        SqlConnection db = new SqlConnection(ConstValue.connectionString);
         //pencere kapatmak icin
         private void btnIptal_Click(object sender, EventArgs e)
         {

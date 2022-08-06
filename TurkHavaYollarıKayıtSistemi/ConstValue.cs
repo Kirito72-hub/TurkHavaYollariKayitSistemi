@@ -12,5 +12,6 @@ namespace TurkHavaYollarıKayıtSistemi
         public static string KullanciAdi { get; set; }
         public static string KullanciSifre { get; set; }
         public static int GlobalClickedCell { get; set; }
+        public static string connectionString = "Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True";
     }
 }
