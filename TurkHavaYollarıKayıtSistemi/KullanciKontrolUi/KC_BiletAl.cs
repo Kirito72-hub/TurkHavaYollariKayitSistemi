@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 {
-    public partial class KC_AnaSayfa : UserControl
+    public partial class KC_BiletAl : UserControl
     {
-        public KC_AnaSayfa()
+        public KC_BiletAl()
         {
             InitializeComponent();
         }

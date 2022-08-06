@@ -1,6 +1,6 @@
 ﻿namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 {
-    partial class KC_AnaSayfa
+    partial class KC_BiletAl
     {
         /// <summary> 
         /// Required designer variable.

@@ -38,7 +38,7 @@ namespace TurkHavaYollarıKayıtSistemi
         //AnaSayfa butunununa basildiginda control ui getirmek (AnaSayfa.cs)
         private void button1_Click(object sender, EventArgs e)
         {
-            KC_AnaSayfa AnaSayfa = new KC_AnaSayfa();
+            KC_BiletAl AnaSayfa = new KC_BiletAl();
             addControls(AnaSayfa);
             
         }
