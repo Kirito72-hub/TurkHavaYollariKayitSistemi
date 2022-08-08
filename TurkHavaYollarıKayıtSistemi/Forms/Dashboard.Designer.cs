@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.SideBanner = new System.Windows.Forms.Panel();
+            this.labelKullanciAdi = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnKullanci = new System.Windows.Forms.Button();
             this.btnUcak = new System.Windows.Forms.Button();
             this.btnYolcu = new System.Windows.Forms.Button();
             this.btnYolculuk = new System.Windows.Forms.Button();
             this.btnAnaSayfa = new System.Windows.Forms.Button();
-            this.labelKullanciAdi = new System.Windows.Forms.Label();
             this.TopPanel = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -71,6 +71,19 @@
             this.SideBanner.Name = "SideBanner";
             this.SideBanner.Size = new System.Drawing.Size(283, 900);
             this.SideBanner.TabIndex = 0;
+            // 
+            // labelKullanciAdi
+            // 
+            this.labelKullanciAdi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelKullanciAdi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelKullanciAdi.Location = new System.Drawing.Point(1, 155);
+            this.labelKullanciAdi.Margin = new System.Windows.Forms.Padding(0);
+            this.labelKullanciAdi.Name = "labelKullanciAdi";
+            this.labelKullanciAdi.Size = new System.Drawing.Size(281, 29);
+            this.labelKullanciAdi.TabIndex = 0;
+            this.labelKullanciAdi.Text = "KullancıAdı";
+            this.labelKullanciAdi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelKullanciAdi.Click += new System.EventHandler(this.labelKullanciAdi_Click);
             // 
             // pictureBox2
             // 
@@ -172,19 +185,6 @@
             this.btnAnaSayfa.Text = "Bilet al";
             this.btnAnaSayfa.UseVisualStyleBackColor = false;
             this.btnAnaSayfa.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // labelKullanciAdi
-            // 
-            this.labelKullanciAdi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelKullanciAdi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelKullanciAdi.Location = new System.Drawing.Point(1, 155);
-            this.labelKullanciAdi.Margin = new System.Windows.Forms.Padding(0);
-            this.labelKullanciAdi.Name = "labelKullanciAdi";
-            this.labelKullanciAdi.Size = new System.Drawing.Size(281, 29);
-            this.labelKullanciAdi.TabIndex = 0;
-            this.labelKullanciAdi.Text = "KullancıAdı";
-            this.labelKullanciAdi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelKullanciAdi.Click += new System.EventHandler(this.labelKullanciAdi_Click);
             // 
             // TopPanel
             // 
@@ -319,7 +319,6 @@
         private System.Windows.Forms.Button btnUcak;
         private System.Windows.Forms.Button btnYolcu;
         private System.Windows.Forms.Button btnYolculuk;
-        private System.Windows.Forms.Button btnAnaSayfa;
         private System.Windows.Forms.Label labelKullanciAdi;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panelControl;
@@ -328,5 +327,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private THYDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.Button btnMinimize;
+        public System.Windows.Forms.Button btnAnaSayfa;
     }
 }

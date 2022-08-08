@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dtpVarisSaati = new System.Windows.Forms.DateTimePicker();
             this.dtpVarisTarihi = new System.Windows.Forms.DateTimePicker();
-            this.dtpKalkisSaati = new System.Windows.Forms.DateTimePicker();
             this.dtpKalkisTarihi = new System.Windows.Forms.DateTimePicker();
             this.cbUcakID = new System.Windows.Forms.ComboBox();
             this.cbNereye = new System.Windows.Forms.ComboBox();
@@ -43,15 +42,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.dtpKalkisSaati = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.dtpKalkisSaati);
             this.panel1.Controls.Add(this.dtpVarisSaati);
             this.panel1.Controls.Add(this.dtpVarisTarihi);
-            this.panel1.Controls.Add(this.dtpKalkisSaati);
             this.panel1.Controls.Add(this.dtpKalkisTarihi);
             this.panel1.Controls.Add(this.cbUcakID);
             this.panel1.Controls.Add(this.cbNereye);
@@ -74,7 +74,7 @@
             // 
             this.dtpVarisSaati.CustomFormat = "HH:mm";
             this.dtpVarisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpVarisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpVarisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpVarisSaati.Location = new System.Drawing.Point(411, 315);
             this.dtpVarisSaati.Name = "dtpVarisSaati";
             this.dtpVarisSaati.ShowUpDown = true;
@@ -91,18 +91,7 @@
             this.dtpVarisTarihi.Name = "dtpVarisTarihi";
             this.dtpVarisTarihi.Size = new System.Drawing.Size(265, 43);
             this.dtpVarisTarihi.TabIndex = 4;
-            this.dtpVarisTarihi.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
-            // 
-            // dtpKalkisSaati
-            // 
-            this.dtpKalkisSaati.CustomFormat = "HH:mm";
-            this.dtpKalkisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.dtpKalkisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpKalkisSaati.Location = new System.Drawing.Point(21, 315);
-            this.dtpKalkisSaati.Name = "dtpKalkisSaati";
-            this.dtpKalkisSaati.ShowUpDown = true;
-            this.dtpKalkisSaati.Size = new System.Drawing.Size(265, 43);
-            this.dtpKalkisSaati.TabIndex = 4;
+            this.dtpVarisTarihi.Value = new System.DateTime(2022, 8, 8, 0, 0, 0, 0);
             // 
             // dtpKalkisTarihi
             // 
@@ -112,6 +101,7 @@
             this.dtpKalkisTarihi.Name = "dtpKalkisTarihi";
             this.dtpKalkisTarihi.Size = new System.Drawing.Size(265, 43);
             this.dtpKalkisTarihi.TabIndex = 4;
+            this.dtpKalkisTarihi.Value = new System.DateTime(2022, 8, 8, 12, 46, 6, 0);
             // 
             // cbUcakID
             // 
@@ -125,7 +115,7 @@
             // 
             // cbNereye
             // 
-            this.cbNereye.DropDownHeight = 200;
+            this.cbNereye.DropDownHeight = 250;
             this.cbNereye.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNereye.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbNereye.FormattingEnabled = true;
@@ -176,7 +166,7 @@
             // cbNerden
             // 
             this.cbNerden.BackColor = System.Drawing.Color.White;
-            this.cbNerden.DropDownHeight = 200;
+            this.cbNerden.DropDownHeight = 250;
             this.cbNerden.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNerden.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbNerden.FormattingEnabled = true;
@@ -303,6 +293,18 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Kalkış Tarihi";
             // 
+            // dtpKalkisSaati
+            // 
+            this.dtpKalkisSaati.CustomFormat = "HH:mm";
+            this.dtpKalkisSaati.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtpKalkisSaati.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpKalkisSaati.Location = new System.Drawing.Point(21, 315);
+            this.dtpKalkisSaati.Name = "dtpKalkisSaati";
+            this.dtpKalkisSaati.ShowUpDown = true;
+            this.dtpKalkisSaati.Size = new System.Drawing.Size(265, 43);
+            this.dtpKalkisSaati.TabIndex = 4;
+            this.dtpKalkisSaati.Value = new System.DateTime(2022, 7, 28, 16, 35, 0, 0);
+            // 
             // YolculukEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,9 +336,9 @@
         private System.Windows.Forms.ComboBox cbUcakID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtpKalkisSaati;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dtpVarisSaati;
+        private System.Windows.Forms.DateTimePicker dtpKalkisSaati;
     }
 }
