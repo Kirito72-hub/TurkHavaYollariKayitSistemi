@@ -59,6 +59,10 @@ namespace TurkHavaYollarıKayıtSistemi
                 //Sifre dogru ise
                 ConstValue.KullanciAdi = txtboxKullanci.Text;
                 ConstValue.KullanciSifre = txtboxSifre.Text;
+                SqlDataAdapter sorgu1 = new SqlDataAdapter("Select ID From Tbl_Kullanci Where Kullanci='" + txtboxKullanci.Text + "' And Sifre='" + txtboxSifre.Text + "'", db);
+                DataTable dt1 = new DataTable();
+                sorgu1.Fill(dt1);
+                ConstValue.KullanciID = Convert.ToInt32(dt1.Rows[0][0].ToString());
                 this.Hide();
                 Dashboard dash = new Dashboard();
                 dash.Show();

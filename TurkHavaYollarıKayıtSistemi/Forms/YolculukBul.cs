@@ -38,10 +38,12 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
             {
                 ConstValue.YolcuBulID = Convert.ToInt32(dt.Rows[0][0]);
                 db.Open();
-                SqlCommand sorgu1 = new SqlCommand("insert into Tbl_YolcuYolculuk (YolcuID, YolculukID, KullanciID) Values (@s1, @s2, @s3)", db);
+                SqlCommand sorgu1 = new SqlCommand("insert into Tbl_YolcuYolculuk(YolcuID, YolculukID, KullanciID) Values(@s1, @s2, @s3)", db);
                 sorgu1.Parameters.AddWithValue("@s1", ConstValue.YolcuBulID);
                 sorgu1.Parameters.AddWithValue("@s2", ConstValue.YolculukID);
-                sorgu1.Parameters.AddWithValue("@s3", ConstValue.KullanciAdi);
+                sorgu1.Parameters.AddWithValue("@s3", ConstValue.KullanciID);
+                sorgu1.ExecuteNonQuery();
+                db.Close();
                 this.Close();
             }
         }

@@ -12,6 +12,7 @@ namespace TurkHavaYollarıKayıtSistemi
         //Kullanci adini alan degisken
         public static string KullanciAdi { get; set; }
         public static string KullanciSifre { get; set; }
+        public static int KullanciID { get; set; }
         public static int YolcuBulID { get; set; }
         public static int YolculukID { get; set; }
 
