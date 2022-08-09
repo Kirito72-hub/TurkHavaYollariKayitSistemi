@@ -67,7 +67,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             FillDataGridView();
             UpdateFont();
             db.Close();
-
+            counters();
         }
         //filtirleme yapan fonsksiyon dtpTarih deger aldigi durumunda
         private void getir()
@@ -95,6 +95,12 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             UpdateFont();
             db.Close();
         }
+        //yolculuk sayisi toplayip label icinde yazmak
+        private void counters()
+        {
+            int counter = dataGridView1.DisplayedRowCount(true);
+            labelYolculukSayisi.Text = counter.ToString();
+        }
         //dtpTarih deger alip almadigini kontrol etmek icin
         bool control = false;
         //dtpTarih degeri degistirildigi zaman filtirleme yenileniyor 
@@ -102,22 +108,19 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             control = true;
             getir();
+            counters();
         }
         //nerden comboboxi degeri degistirildigi zaman liste yenileniyor
         private void cbNerden_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (control == false)
-                getir1();
-            else
-                getir();
+            if (control == false) { getir1(); counters(); }
+            else { getir(); counters(); }
         }
         //nereye comboboxi degeri degistirildigi zaman liste yenileniyor
         private void cbNereye_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (control == false)
-                getir1();
-            else
-                getir();
+            if (control == false) { getir1(); counters(); }
+            else { getir(); counters(); }
         }
         //filtirleme sifirlamak icin
         private void btnSifirla_Click(object sender, EventArgs e)
@@ -127,9 +130,6 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             cbNerden.SelectedIndex = -1;
             cbNereye.SelectedIndex = -1;
             KC_BiletAl_Load(this, null);
-
         }
-
-
     }
 }
