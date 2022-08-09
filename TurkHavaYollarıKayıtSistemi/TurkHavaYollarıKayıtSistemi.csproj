@@ -81,6 +81,12 @@
     <Compile Include="Forms\YolcuEkle.Designer.cs">
       <DependentUpon>YolcuEkle.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\YolculukBul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\YolculukBul.Designer.cs">
+      <DependentUpon>YolculukBul.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\YolculukEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YolcuEkle.resx">
       <DependentUpon>YolcuEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\YolculukBul.resx">
+      <DependentUpon>YolculukBul.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\YolculukEkle.resx">
       <DependentUpon>YolculukEkle.cs</DependentUpon>

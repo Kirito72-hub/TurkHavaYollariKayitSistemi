@@ -31,16 +31,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBoxTel = new System.Windows.Forms.TextBox();
             this.txtBoxEposta = new System.Windows.Forms.TextBox();
+            this.txtBoxTc = new System.Windows.Forms.TextBox();
             this.txtBoxSoyad = new System.Windows.Forms.TextBox();
             this.txtBoxAd = new System.Windows.Forms.TextBox();
             this.btnIptal = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,12 +51,14 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtBoxTel);
             this.panel1.Controls.Add(this.txtBoxEposta);
+            this.panel1.Controls.Add(this.txtBoxTc);
             this.panel1.Controls.Add(this.txtBoxSoyad);
             this.panel1.Controls.Add(this.txtBoxAd);
             this.panel1.Controls.Add(this.btnIptal);
             this.panel1.Controls.Add(this.btnKaydet);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label6);
@@ -63,30 +67,38 @@
             this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 605);
+            this.panel1.Size = new System.Drawing.Size(464, 677);
             this.panel1.TabIndex = 2;
             // 
             // txtBoxTel
             // 
             this.txtBoxTel.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxTel.Location = new System.Drawing.Point(129, 431);
+            this.txtBoxTel.Location = new System.Drawing.Point(129, 514);
             this.txtBoxTel.Name = "txtBoxTel";
             this.txtBoxTel.Size = new System.Drawing.Size(206, 43);
-            this.txtBoxTel.TabIndex = 3;
+            this.txtBoxTel.TabIndex = 4;
             this.txtBoxTel.Tag = "";
             // 
             // txtBoxEposta
             // 
             this.txtBoxEposta.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxEposta.Location = new System.Drawing.Point(70, 336);
+            this.txtBoxEposta.Location = new System.Drawing.Point(70, 419);
             this.txtBoxEposta.Name = "txtBoxEposta";
             this.txtBoxEposta.Size = new System.Drawing.Size(265, 43);
-            this.txtBoxEposta.TabIndex = 2;
+            this.txtBoxEposta.TabIndex = 3;
+            // 
+            // txtBoxTc
+            // 
+            this.txtBoxTc.Font = new System.Drawing.Font("Calibri", 21.75F);
+            this.txtBoxTc.Location = new System.Drawing.Point(70, 295);
+            this.txtBoxTc.Name = "txtBoxTc";
+            this.txtBoxTc.Size = new System.Drawing.Size(265, 43);
+            this.txtBoxTc.TabIndex = 2;
             // 
             // txtBoxSoyad
             // 
             this.txtBoxSoyad.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxSoyad.Location = new System.Drawing.Point(70, 220);
+            this.txtBoxSoyad.Location = new System.Drawing.Point(70, 207);
             this.txtBoxSoyad.Name = "txtBoxSoyad";
             this.txtBoxSoyad.Size = new System.Drawing.Size(265, 43);
             this.txtBoxSoyad.TabIndex = 1;
@@ -105,10 +117,10 @@
             this.btnIptal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIptal.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnIptal.ForeColor = System.Drawing.Color.Red;
-            this.btnIptal.Location = new System.Drawing.Point(230, 525);
+            this.btnIptal.Location = new System.Drawing.Point(235, 605);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(184, 53);
-            this.btnIptal.TabIndex = 5;
+            this.btnIptal.TabIndex = 6;
             this.btnIptal.Text = "İptal";
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -119,10 +131,10 @@
             this.btnKaydet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKaydet.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnKaydet.ForeColor = System.Drawing.Color.LimeGreen;
-            this.btnKaydet.Location = new System.Drawing.Point(40, 525);
+            this.btnKaydet.Location = new System.Drawing.Point(45, 605);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(184, 53);
-            this.btnKaydet.TabIndex = 4;
+            this.btnKaydet.TabIndex = 5;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
@@ -131,7 +143,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(63, 294);
+            this.label5.Location = new System.Drawing.Point(63, 377);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(116, 39);
             this.label5.TabIndex = 0;
@@ -148,11 +160,21 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Yeni Yolcu Ekle";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.Location = new System.Drawing.Point(63, 253);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(49, 39);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "TC";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(63, 178);
+            this.label3.Location = new System.Drawing.Point(63, 165);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 39);
             this.label3.TabIndex = 0;
@@ -168,32 +190,32 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ad";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(63, 389);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 39);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Telefon Numerası";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(63, 432);
+            this.label6.Location = new System.Drawing.Point(63, 515);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 39);
             this.label6.TabIndex = 0;
             this.label6.Text = "+90";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(63, 472);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(248, 39);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Telefon Numerası";
             // 
             // YolcuEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
-            this.ClientSize = new System.Drawing.Size(474, 626);
+            this.ClientSize = new System.Drawing.Size(484, 698);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "YolcuEkle";
@@ -219,5 +241,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtBoxTc;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -27,6 +27,7 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
             else if (txtBoxEposta.Text == "") { MessageBox.Show("Eposta yazınız!"); flick = false; }
             else if (txtBoxTel.Text == "") { MessageBox.Show("11 haneli telefon numerası yazınız!"); flick = false; }
             else if (txtBoxTel.TextLength != 10) { MessageBox.Show("10 haneli telefon numerası yazınız!"); flick = false; }
+            else if (txtBoxTc.TextLength != 11) { MessageBox.Show("11 haneli TC numerası yazınız!"); flick = false; }
 
             if (flick == true)
             {
@@ -34,12 +35,13 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
                 if (dialogResult == DialogResult.Yes)
                 {
                     db.Open();
-                    SqlCommand sorgu = new SqlCommand("Insert into Tbl_Yolcu (Ad, Soyad, Eposta, Tel, KayitTarihi) values(@s1, @s2, @s3, @s4, @s5)", db);
-                    sorgu.Parameters.AddWithValue("@s1", txtBoxAd.Text);
-                    sorgu.Parameters.AddWithValue("@s2", txtBoxSoyad.Text);
-                    sorgu.Parameters.AddWithValue("@s3", txtBoxEposta.Text);
-                    sorgu.Parameters.AddWithValue("@s4", txtBoxTel.Text);
-                    sorgu.Parameters.AddWithValue("@s5", dNow);
+                    SqlCommand sorgu = new SqlCommand("Insert into Tbl_Yolcu (TC, Ad, Soyad, Eposta, Tel, KayitTarihi) values(@s1, @s2, @s3, @s4, @s5, @s6)", db);
+                    sorgu.Parameters.AddWithValue("@s1", txtBoxTc.Text);
+                    sorgu.Parameters.AddWithValue("@s2", txtBoxAd.Text);
+                    sorgu.Parameters.AddWithValue("@s3", txtBoxSoyad.Text);
+                    sorgu.Parameters.AddWithValue("@s4", txtBoxEposta.Text);
+                    sorgu.Parameters.AddWithValue("@s5", txtBoxTel.Text);
+                    sorgu.Parameters.AddWithValue("@s6", dNow);
                     sorgu.ExecuteNonQuery();
 
                     db.Close();

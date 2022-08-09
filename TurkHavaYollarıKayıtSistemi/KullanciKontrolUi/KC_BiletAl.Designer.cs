@@ -38,9 +38,9 @@
             this.btnUcakSil = new System.Windows.Forms.Button();
             this.btnUcakEkle = new System.Windows.Forms.Button();
             this.lowerPanel = new System.Windows.Forms.Panel();
+            this.labelYolculukSayisi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.labeltxt = new System.Windows.Forms.Label();
-            this.labelYolculukSayisi = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.upperPanel.SuspendLayout();
             this.lowerPanel.SuspendLayout();
@@ -223,6 +223,17 @@
             this.lowerPanel.Size = new System.Drawing.Size(1408, 69);
             this.lowerPanel.TabIndex = 4;
             // 
+            // labelYolculukSayisi
+            // 
+            this.labelYolculukSayisi.AutoSize = true;
+            this.labelYolculukSayisi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelYolculukSayisi.ForeColor = System.Drawing.Color.White;
+            this.labelYolculukSayisi.Location = new System.Drawing.Point(1301, 21);
+            this.labelYolculukSayisi.Name = "labelYolculukSayisi";
+            this.labelYolculukSayisi.Size = new System.Drawing.Size(37, 29);
+            this.labelYolculukSayisi.TabIndex = 2;
+            this.labelYolculukSayisi.Text = "00";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -244,17 +255,6 @@
             this.labeltxt.Size = new System.Drawing.Size(159, 29);
             this.labeltxt.TabIndex = 1;
             this.labeltxt.Text = "Yolculuk sayısı:";
-            // 
-            // labelYolculukSayisi
-            // 
-            this.labelYolculukSayisi.AutoSize = true;
-            this.labelYolculukSayisi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelYolculukSayisi.ForeColor = System.Drawing.Color.White;
-            this.labelYolculukSayisi.Location = new System.Drawing.Point(1301, 21);
-            this.labelYolculukSayisi.Name = "labelYolculukSayisi";
-            this.labelYolculukSayisi.Size = new System.Drawing.Size(37, 29);
-            this.labelYolculukSayisi.TabIndex = 2;
-            this.labelYolculukSayisi.Text = "00";
             // 
             // dataGridView1
             // 

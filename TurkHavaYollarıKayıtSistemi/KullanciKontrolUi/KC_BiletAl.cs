@@ -131,17 +131,23 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             cbNereye.SelectedIndex = -1;
             KC_BiletAl_Load(this, null);
         }
-
+        //cift tikla olayi
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int YolculukID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            ConstValue.YolculukID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
             DialogResult dialogResult = MessageBox.Show("Yolcu kaydı var mı ?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
-
+                //YolcuBul formu cagirmak
+                using (YolculukBul YolculukBul = new YolculukBul())
+                {
+                    YolculukBul.ShowDialog();
+                    this.OnLoad(e);
+                }
             }
             else
             {
+                //YolcuEkle formu acar kullanci no basinca
                 MessageBox.Show("Lütfen yolcu kaydı olusturunuz!");
                 using (YolcuEkle YolcuEkle = new YolcuEkle())
                 {
