@@ -103,7 +103,12 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         private void counters()
         {
             int counter = dataGridView1.DisplayedRowCount(true);
-            labelYolculukSayisi.Text = counter.ToString();
+            labelYolculukSayisi.Text = "Yolculuk Sayısı: "+counter.ToString();
+        }
+        private void CounterBilet()
+        {
+            int CounterBilet = dataGridView2.DisplayedRowCount(true);
+            labelYolculukSayisi.Text = "Bilet Sayısı: " + CounterBilet.ToString();
         }
         //dtpTarih deger alip almadigini kontrol etmek icin
         bool control = false;
@@ -135,11 +140,6 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             cbNereye.SelectedIndex = -1;
             KC_BiletAl_Load(this, null);
         }
-        
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
         //cift tikla olayi
         private void dataGridView1_CellDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
@@ -164,6 +164,13 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
                     this.OnLoad(e);
                 }
             }
+        }
+        //tab degisince bilet sil butonu cikacak ve bilet sayisi yenilecek geri tab gidince kalmayacaklar
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 1) { btnBiletSil.Visible = true; CounterBilet();}
+                
+            else if(tabControl1.SelectedIndex == 0) { btnBiletSil.Visible = false; counters(); }
         }
     }
 }
