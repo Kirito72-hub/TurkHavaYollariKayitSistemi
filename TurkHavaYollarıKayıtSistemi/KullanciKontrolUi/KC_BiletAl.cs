@@ -174,27 +174,29 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
                 
             else if(tabControl1.SelectedIndex == 0) { btnBiletSil.Visible = false; counters(); }
         }
+        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
+        //Secilen cell'in hangi satirda oldugunu ogrencmek icin 
         int Scell;
-        private void btnBiletSil_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                db.Open();
-                SqlCommand sorguSil = new SqlCommand("delete from Tbl_YolcuYolculuk where YolcuYolculukID=@s1", db);
-                sorguSil.Parameters.AddWithValue("@s1", Scell);
-                sorguSil.ExecuteNonQuery();
-                db.Close();
-                MessageBox.Show("Bilet Kaydı Silindi");
-                this.OnLoad(e);
-            }
-        }
-
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = dataGridView2.CurrentCell.RowIndex;
             object value = dataGridView2.Rows[index].Cells[0].Value;
             Scell = (int)value;
         }
+        //Delete butonda SP kullanildi cell numerasi Scell degiskeninde atilir ve SP'ye gonderilir
+        private void btnBiletSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                db.Open();
+                SqlCommand sorguSil = new SqlCommand("Exec DeleteYolcuYolculuk Where YolcuYolculukID='"+ Scell + "'", db);
+                sorguSil.ExecuteNonQuery();
+                db.Close();
+                MessageBox.Show("Bilet Kaydı Silindi");
+                this.OnLoad(e);
+            }
+        }
+        
     }
 }
