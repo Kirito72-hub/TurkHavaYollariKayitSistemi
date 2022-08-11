@@ -66,10 +66,11 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             dataGridView1.DataSource = dt;
             FillDataGridView();
             UpdateFont();
-            SqlDataAdapter sorgu1 = new SqlDataAdapter("Select y.Ad+' '+y.Soyad as 'Ad Soyad', y.TC, yk.Nerden, yk.Nereye, yk.GidisTarihi, yk.VarisTarihi, k.Kullanci as 'işlem yapanı' From Tbl_YolcuYolculuk INNER JOIN Tbl_Kullanci k on k.ID=Tbl_YolcuYolculuk.KullanciID INNER JOIN Tbl_Yolcu y ON y.YolcuID=Tbl_YolcuYolculuk.YolcuID INNER JOIN Tbl_Yolculuk yk ON yk.YolculukID=Tbl_YolcuYolculuk.YolculukID", db);
+            SqlDataAdapter sorgu1 = new SqlDataAdapter("Select YolcuYolculukID, y.Ad+' '+y.Soyad as 'Ad Soyad', y.TC, yk.Nerden, yk.Nereye, yk.GidisTarihi, yk.VarisTarihi, k.Kullanci as 'işlem yapanı' From Tbl_YolcuYolculuk INNER JOIN Tbl_Kullanci k on k.ID=Tbl_YolcuYolculuk.KullanciID INNER JOIN Tbl_Yolcu y ON y.YolcuID=Tbl_YolcuYolculuk.YolcuID INNER JOIN Tbl_Yolculuk yk ON yk.YolculukID=Tbl_YolcuYolculuk.YolculukID", db);
             DataTable dt1 = new DataTable();
             sorgu1.Fill(dt1);
             dataGridView2.DataSource = dt1;
+            dataGridView2.Columns[0].Visible = false;
             db.Close();
             counters();
         }
@@ -105,6 +106,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             int counter = dataGridView1.DisplayedRowCount(true);
             labelYolculukSayisi.Text = "Yolculuk Sayısı: "+counter.ToString();
         }
+        //Bilet sayisi toplayip label icinde yazmak
         private void CounterBilet()
         {
             int CounterBilet = dataGridView2.DisplayedRowCount(true);
@@ -171,6 +173,28 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             if (tabControl1.SelectedIndex == 1) { btnBiletSil.Visible = true; CounterBilet();}
                 
             else if(tabControl1.SelectedIndex == 0) { btnBiletSil.Visible = false; counters(); }
+        }
+        int Scell;
+        private void btnBiletSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                db.Open();
+                SqlCommand sorguSil = new SqlCommand("delete from Tbl_YolcuYolculuk where YolcuYolculukID=@s1", db);
+                sorguSil.Parameters.AddWithValue("@s1", Scell);
+                sorguSil.ExecuteNonQuery();
+                db.Close();
+                MessageBox.Show("Bilet Kaydı Silindi");
+                this.OnLoad(e);
+            }
+        }
+
+        private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dataGridView2.CurrentCell.RowIndex;
+            object value = dataGridView2.Rows[index].Cells[0].Value;
+            Scell = (int)value;
         }
     }
 }
