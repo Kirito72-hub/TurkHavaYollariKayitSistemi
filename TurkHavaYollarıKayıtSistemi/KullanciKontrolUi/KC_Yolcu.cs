@@ -84,8 +84,8 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             }
         }
         //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
+        //Secilen cell'in hangi satirda oldugunu ogrencmek icin
         int Scell;
-        //Secilen cell'in hangi satirda oldugunu ogrencmek icin 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             btnYolcuSil.Visible = true;
