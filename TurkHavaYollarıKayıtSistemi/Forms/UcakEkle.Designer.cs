@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtBoxGar = new System.Windows.Forms.TextBox();
+            this.txtBoxKapasite = new System.Windows.Forms.TextBox();
+            this.txtBoxUcakModeli = new System.Windows.Forms.TextBox();
             this.dtpSonBakimTarihi = new System.Windows.Forms.DateTimePicker();
             this.btnIptal = new System.Windows.Forms.Button();
             this.btnKaydet = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtBoxUcakModeli = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtBoxKapasite = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtBoxGar = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,30 @@
             this.panel1.Size = new System.Drawing.Size(779, 427);
             this.panel1.TabIndex = 1;
             // 
+            // txtBoxGar
+            // 
+            this.txtBoxGar.Font = new System.Drawing.Font("Calibri", 21.75F);
+            this.txtBoxGar.Location = new System.Drawing.Point(94, 247);
+            this.txtBoxGar.Name = "txtBoxGar";
+            this.txtBoxGar.Size = new System.Drawing.Size(265, 43);
+            this.txtBoxGar.TabIndex = 2;
+            // 
+            // txtBoxKapasite
+            // 
+            this.txtBoxKapasite.Font = new System.Drawing.Font("Calibri", 21.75F);
+            this.txtBoxKapasite.Location = new System.Drawing.Point(429, 128);
+            this.txtBoxKapasite.Name = "txtBoxKapasite";
+            this.txtBoxKapasite.Size = new System.Drawing.Size(265, 43);
+            this.txtBoxKapasite.TabIndex = 1;
+            // 
+            // txtBoxUcakModeli
+            // 
+            this.txtBoxUcakModeli.Font = new System.Drawing.Font("Calibri", 21.75F);
+            this.txtBoxUcakModeli.Location = new System.Drawing.Point(94, 128);
+            this.txtBoxUcakModeli.Name = "txtBoxUcakModeli";
+            this.txtBoxUcakModeli.Size = new System.Drawing.Size(265, 43);
+            this.txtBoxUcakModeli.TabIndex = 0;
+            // 
             // dtpSonBakimTarihi
             // 
             this.dtpSonBakimTarihi.Font = new System.Drawing.Font("Calibri", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -71,7 +95,7 @@
             this.dtpSonBakimTarihi.Location = new System.Drawing.Point(429, 247);
             this.dtpSonBakimTarihi.Name = "dtpSonBakimTarihi";
             this.dtpSonBakimTarihi.Size = new System.Drawing.Size(265, 43);
-            this.dtpSonBakimTarihi.TabIndex = 4;
+            this.dtpSonBakimTarihi.TabIndex = 3;
             // 
             // btnIptal
             // 
@@ -82,7 +106,7 @@
             this.btnIptal.Location = new System.Drawing.Point(393, 342);
             this.btnIptal.Name = "btnIptal";
             this.btnIptal.Size = new System.Drawing.Size(184, 53);
-            this.btnIptal.TabIndex = 1;
+            this.btnIptal.TabIndex = 5;
             this.btnIptal.Text = "İptal";
             this.btnIptal.UseVisualStyleBackColor = true;
             this.btnIptal.Click += new System.EventHandler(this.btnIptal_Click);
@@ -96,10 +120,20 @@
             this.btnKaydet.Location = new System.Drawing.Point(203, 342);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(184, 53);
-            this.btnKaydet.TabIndex = 1;
+            this.btnKaydet.TabIndex = 4;
             this.btnKaydet.Text = "Kaydet";
             this.btnKaydet.UseVisualStyleBackColor = true;
             this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(87, 205);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 39);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Gar";
             // 
             // label2
             // 
@@ -112,23 +146,15 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Yeni Uçak Ekle";
             // 
-            // label4
+            // label3
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(422, 205);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(237, 39);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Son Bakım Tarihi";
-            // 
-            // txtBoxUcakModeli
-            // 
-            this.txtBoxUcakModeli.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxUcakModeli.Location = new System.Drawing.Point(94, 128);
-            this.txtBoxUcakModeli.Name = "txtBoxUcakModeli";
-            this.txtBoxUcakModeli.Size = new System.Drawing.Size(265, 43);
-            this.txtBoxUcakModeli.TabIndex = 5;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(422, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 39);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Kapasite";
             // 
             // label1
             // 
@@ -140,41 +166,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Uçak Modeli";
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(422, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 39);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Kapasite";
-            // 
-            // txtBoxKapasite
-            // 
-            this.txtBoxKapasite.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxKapasite.Location = new System.Drawing.Point(429, 128);
-            this.txtBoxKapasite.Name = "txtBoxKapasite";
-            this.txtBoxKapasite.Size = new System.Drawing.Size(265, 43);
-            this.txtBoxKapasite.TabIndex = 5;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(87, 205);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 39);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Gar";
-            // 
-            // txtBoxGar
-            // 
-            this.txtBoxGar.Font = new System.Drawing.Font("Calibri", 21.75F);
-            this.txtBoxGar.Location = new System.Drawing.Point(94, 247);
-            this.txtBoxGar.Name = "txtBoxGar";
-            this.txtBoxGar.Size = new System.Drawing.Size(265, 43);
-            this.txtBoxGar.TabIndex = 5;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(422, 205);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(237, 39);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Son Bakım Tarihi";
             // 
             // UcakEkle
             // 

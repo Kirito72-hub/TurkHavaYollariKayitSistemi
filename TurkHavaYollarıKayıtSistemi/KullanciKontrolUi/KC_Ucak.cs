@@ -51,7 +51,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             //tabloyu ekrana yazmak
             db.Open();
-            SqlDataAdapter sorgu = new SqlDataAdapter("Select * from Tbl_Ucak", db);
+            SqlDataAdapter sorgu = new SqlDataAdapter("Exec SelectUcak", db);
             DataTable dt = new DataTable();
             sorgu.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -59,8 +59,8 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             UpdateFont();
 
             //yolculuk sayisi toplayip label icinde yazmak
-            SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Ucak", db);
-            labelUcakSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
+            SqlCommand UcakSayisi = new SqlCommand("Select count(*) from Tbl_Ucak", db);
+            labelUcakSayisi.Text = "Uçak Sayısı: " + UcakSayisi.ExecuteScalar().ToString();
             db.Close();
         }
         private void btnUcakEkle_Click(object sender, EventArgs e)
@@ -88,8 +88,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             if (dialogResult == DialogResult.Yes)
             {
                 db.Open();
-                SqlCommand sorguSil = new SqlCommand("delete from Tbl_Ucak where UcakID=@s1", db);
-                sorguSil.Parameters.AddWithValue("@s1", Scell);
+                SqlCommand sorguSil = new SqlCommand("Exec DeleteUcak '" +Scell+ "'", db);
                 sorguSil.ExecuteNonQuery();
                 db.Close();
                 MessageBox.Show("Uçak Kaydı Silindi");

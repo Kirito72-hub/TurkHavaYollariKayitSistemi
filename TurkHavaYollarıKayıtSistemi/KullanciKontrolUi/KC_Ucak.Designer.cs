@@ -36,7 +36,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lowerPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.labeltxt = new System.Windows.Forms.Label();
             this.labelUcakSayisi = new System.Windows.Forms.Label();
             this.upperPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -112,7 +111,6 @@
             // 
             this.lowerPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(43)))), ((int)(((byte)(56)))));
             this.lowerPanel.Controls.Add(this.label1);
-            this.lowerPanel.Controls.Add(this.labeltxt);
             this.lowerPanel.Controls.Add(this.labelUcakSayisi);
             this.lowerPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lowerPanel.Location = new System.Drawing.Point(0, 600);
@@ -131,23 +129,12 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Türk Hava Yolları A.O. Her hakkı saklıdır. © 1996 - 2022";
             // 
-            // labeltxt
-            // 
-            this.labeltxt.AutoSize = true;
-            this.labeltxt.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labeltxt.ForeColor = System.Drawing.Color.White;
-            this.labeltxt.Location = new System.Drawing.Point(1168, 20);
-            this.labeltxt.Name = "labeltxt";
-            this.labeltxt.Size = new System.Drawing.Size(127, 29);
-            this.labeltxt.TabIndex = 1;
-            this.labeltxt.Text = "Uçak Sayısı:";
-            // 
             // labelUcakSayisi
             // 
             this.labelUcakSayisi.AutoSize = true;
             this.labelUcakSayisi.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelUcakSayisi.ForeColor = System.Drawing.Color.White;
-            this.labelUcakSayisi.Location = new System.Drawing.Point(1301, 20);
+            this.labelUcakSayisi.Location = new System.Drawing.Point(1246, 21);
             this.labelUcakSayisi.Name = "labelUcakSayisi";
             this.labelUcakSayisi.Size = new System.Drawing.Size(37, 29);
             this.labelUcakSayisi.TabIndex = 2;
@@ -179,7 +166,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel lowerPanel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labeltxt;
         private System.Windows.Forms.Label labelUcakSayisi;
     }
 }

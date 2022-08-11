@@ -36,13 +36,8 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
                 if (dialogResult == DialogResult.Yes)
                 {
                     db.Open();
-                    SqlCommand sorgu = new SqlCommand("Insert into Tbl_Ucak (UcakModeli, Kapasite, Gar, SonBakimTarihi) values(@s1, @s2, @s3, @s4)", db);
-                    sorgu.Parameters.AddWithValue("@s1", txtBoxUcakModeli.Text);
-                    sorgu.Parameters.AddWithValue("@s2", txtBoxKapasite.Text);
-                    sorgu.Parameters.AddWithValue("@s3", txtBoxGar.Text);
-                    sorgu.Parameters.AddWithValue("@s4", dtpSonBakimTarihi.Value);
+                    SqlCommand sorgu = new SqlCommand("Exec InsertUcak '" + txtBoxUcakModeli.Text + "','" + txtBoxKapasite.Text + "','" + txtBoxGar.Text + "','" + dtpSonBakimTarihi.Value + "'", db) ;
                     sorgu.ExecuteNonQuery();
-
                     db.Close();
                     this.Close();
                     MessageBox.Show("Kayıt Eklendi !!!");
