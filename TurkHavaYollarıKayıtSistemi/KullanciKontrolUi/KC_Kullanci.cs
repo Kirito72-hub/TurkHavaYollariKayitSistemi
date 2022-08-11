@@ -25,7 +25,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             //tabloyu ekrana yazmak
             db.Open();
-            SqlDataAdapter sorgu = new SqlDataAdapter("Select ID,Kullanci from Tbl_Kullanci", db);
+            SqlDataAdapter sorgu = new SqlDataAdapter("Exec SelectKullancilar", db);
             DataTable dt = new DataTable();
             sorgu.Fill(dt);
             dataGridView1.DataSource = dt;
@@ -76,21 +76,19 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             object value = dataGridView1.Rows[index].Cells[0].Value;
             Scell = (int)value;
         }
+        //Delete butonda SP kullanildi cell numerasi Scell degiskeninde atilir ve SP'ye gonderilir
         private void btnKullanciSil_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 db.Open();
-                SqlCommand sorguSil = new SqlCommand("delete from Tbl_Kullanci where ID=@s1", db);
-                sorguSil.Parameters.AddWithValue("@s1", Scell);
+                SqlCommand sorguSil = new SqlCommand("Exec DeleteKullanci'"+ Scell +"'", db);
                 sorguSil.ExecuteNonQuery();
                 db.Close();
                 MessageBox.Show("Kullancı Kaydı Silindi");
                 this.OnLoad(e);
             }
         }
-
-        
     }
 }

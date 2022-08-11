@@ -43,11 +43,8 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
                 if (dialogResult == DialogResult.Yes)
                 {
                     db.Open();
-                    SqlCommand sorgu = new SqlCommand("Insert into Tbl_Kullanci (Kullanci, Sifre) values(@s1, @s2)", db);
-                    sorgu.Parameters.AddWithValue("@s1", txtBoxKullanci.Text);
-                    sorgu.Parameters.AddWithValue("@s2", txtBoxSifre.Text);
+                    SqlCommand sorgu = new SqlCommand("Exec InsertKullanci '" +txtBoxKullanci.Text+ "','" +txtBoxSifre.Text+ "'", db);
                     sorgu.ExecuteNonQuery();
-
                     db.Close();
                     this.Close();
                     MessageBox.Show("Kayıt Eklendi !!!");
