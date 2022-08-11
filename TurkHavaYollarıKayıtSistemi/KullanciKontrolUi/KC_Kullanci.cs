@@ -32,9 +32,9 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             FillDataGridView();
             UpdateFont();
 
-            //yolculuk sayisi toplayip label icinde yazmak
-            SqlCommand YolculukSayisi = new SqlCommand("Select count(*) from Tbl_Kullanci", db);
-            labelKullanciSayisi.Text = YolculukSayisi.ExecuteScalar().ToString();
+            //Kullancı Sayısı toplayip label icinde yazmak
+            SqlCommand KullanciSayisi = new SqlCommand("Select count(*) from Tbl_Kullanci", db);
+            labelKullanciSayisi.Text = "Kullancı Sayısı: " + KullanciSayisi.ExecuteScalar().ToString();
             db.Close();
         }
         //datagridview1 headers basliklari degistirmek
@@ -60,7 +60,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
 
         private void btnKullanciEkle_Click(object sender, EventArgs e)
         {
-            //Ucak Ekle kodu formu cagirmak
+            //Kullanci Ekle formu cagirmak
             using (KullanciEkle KullanciEkle = new KullanciEkle())
             {
                 KullanciEkle.ShowDialog();

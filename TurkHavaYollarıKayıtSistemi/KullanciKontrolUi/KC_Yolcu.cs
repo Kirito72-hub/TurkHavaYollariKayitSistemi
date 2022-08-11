@@ -21,7 +21,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         //sql baglantisini kurmak
         SqlConnection db = new SqlConnection(ConstValue.connectionString);
 
-        //datagridview1 headers basliklari degistirmek
+        //datagridview1 headers basliklari degistirecek kod
         private void FillDataGridView()
         {
             dataGridView1.Columns[0].HeaderText = "Yolcu No";
@@ -45,7 +45,6 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             dataGridView1.Columns[6].HeaderText = "Kayıt Tarihi";
             dataGridView1.Columns[6].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridView1.Columns[6].AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-
             dataGridView1.AutoResizeColumnHeadersHeight();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.ClearSelection();
@@ -70,14 +69,14 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             FillDataGridView();
             UpdateFont();
 
-            //yolculuk sayisi toplayip label icinde yazmak
+            //Yolcu Sayısı toplayip label icinde yazmak
             SqlCommand YolcuSayisi = new SqlCommand("Select count(*) from Tbl_Yolcu", db);
-            labelYolcuSayisi.Text = YolcuSayisi.ExecuteScalar().ToString();
+            labelYolcuSayisi.Text = "Yolcu Sayısı: " + YolcuSayisi.ExecuteScalar().ToString();
             db.Close();
         }
         private void btnYolcuEkle_Click(object sender, EventArgs e)
         {
-            //Ucak Ekle kodu formu cagirmak
+            //Yolcu Ekle formu cagirmak
             using (YolcuEkle YolcuEkle = new YolcuEkle())
             {
                 YolcuEkle.ShowDialog();
@@ -86,32 +85,27 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         }
         //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
         int Scell;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
-        private void btnYolcuSil_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (dialogResult == DialogResult.Yes)
-            {
-                db.Open();
-                SqlCommand sorguSil = new SqlCommand("delete from Tbl_Yolcu where YolcuID=@s1", db);
-                sorguSil.Parameters.AddWithValue("@s1", Scell);
-                sorguSil.ExecuteNonQuery();
-                db.Close();
-                MessageBox.Show("Yolcu Kaydı Silindi");
-                this.OnLoad(e);
-            }
-        }
-
+        //Secilen cell'in hangi satirda oldugunu ogrencmek icin 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             btnYolcuSil.Visible = true;
             int index = dataGridView1.CurrentCell.RowIndex;
             object value = dataGridView1.Rows[index].Cells[0].Value;
             Scell = (int)value;
+        }
+        //Delete butonda SP kullanildi cell numerasi Scell degiskeninde atilir ve SP'ye gonderilir
+        private void btnYolcuSil_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                db.Open();
+                SqlCommand sorguSil = new SqlCommand("Exec DeleteYolcu '" +Scell+ "'", db);
+                sorguSil.ExecuteNonQuery();
+                db.Close();
+                MessageBox.Show("Yolcu Kaydı Silindi");
+                this.OnLoad(e);
+            }
         }
     }
 }

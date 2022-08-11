@@ -58,21 +58,21 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             FillDataGridView();
             UpdateFont();
 
-            //yolculuk sayisi toplayip label icinde yazmak
+            //Uçak Sayısı toplayip label icinde yazmak
             SqlCommand UcakSayisi = new SqlCommand("Select count(*) from Tbl_Ucak", db);
             labelUcakSayisi.Text = "Uçak Sayısı: " + UcakSayisi.ExecuteScalar().ToString();
             db.Close();
         }
         private void btnUcakEkle_Click(object sender, EventArgs e)
         {
-            //Ucak Ekle kodu formu cagirmak
+            //Ucak Ekle formu cagirmak
             using (UcakEkle UcakEkle = new UcakEkle())
             {
                 UcakEkle.ShowDialog();
                 this.OnLoad(e);
             }
         }
-        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
+        //tablodan bir cell uzerinde basarsak silmek butonu cikar, silme basarsak kayit siliniyor
         int Scell;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -81,7 +81,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             object value = dataGridView1.Rows[index].Cells[0].Value;
             Scell = (int)value;
         }
-        //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
+        //Delete butonda SP kullanildi cell numerasi Scell degiskeninde atilir ve SP'ye gonderilir
         private void btnUcakSil_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Kaydı silmek istiyor musunuz?", "confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

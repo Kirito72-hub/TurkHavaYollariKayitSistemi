@@ -35,22 +35,14 @@ namespace TurkHavaYollarıKayıtSistemi.Forms
                 if (dialogResult == DialogResult.Yes)
                 {
                     db.Open();
-                    SqlCommand sorgu = new SqlCommand("Insert into Tbl_Yolcu (TC, Ad, Soyad, Eposta, Tel, KayitTarihi) values(@s1, @s2, @s3, @s4, @s5, @s6)", db);
-                    sorgu.Parameters.AddWithValue("@s1", txtBoxTc.Text);
-                    sorgu.Parameters.AddWithValue("@s2", txtBoxAd.Text);
-                    sorgu.Parameters.AddWithValue("@s3", txtBoxSoyad.Text);
-                    sorgu.Parameters.AddWithValue("@s4", txtBoxEposta.Text);
-                    sorgu.Parameters.AddWithValue("@s5", txtBoxTel.Text);
-                    sorgu.Parameters.AddWithValue("@s6", dNow);
+                    SqlCommand sorgu = new SqlCommand("Exec InsertYolcu '" + txtBoxTc.Text + "','" + txtBoxAd.Text + "','" + txtBoxSoyad.Text + "','" + txtBoxEposta.Text + "','" + txtBoxTel.Text + "','" + dNow + "'", db);
                     sorgu.ExecuteNonQuery();
-
                     db.Close();
                     this.Close();
                     MessageBox.Show("Kayıt Eklendi !!!");
                 }
             }
         }
-        
         //pencere kapatmak icin
         private void btnIptal_Click(object sender, EventArgs e)
         {
