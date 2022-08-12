@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 using TurkHavaYollarıKayıtSistemi.KullanciKontrolUi;
 
 namespace TurkHavaYollarıKayıtSistemi
@@ -17,6 +18,8 @@ namespace TurkHavaYollarıKayıtSistemi
         {
             InitializeComponent();
         }
+        //databasein nesnesi olusturmasi
+        SqlConnection db = new SqlConnection(ConstValue.connectionString);
         //Kullanci adini Merhaba! den sonra yzilmasi
         private void Dashboard_Load(object sender, EventArgs e)
         {
@@ -33,6 +36,10 @@ namespace TurkHavaYollarıKayıtSistemi
 
         private void button6_Click(object sender, EventArgs e)
         {
+            db.Open();
+            SqlCommand cmd = new SqlCommand("Exec KullanciAdiGetir", db);
+            cmd.ExecuteNonQuery();
+            db.Close();
             Application.Exit();
         }
         //AnaSayfa butunununa basildiginda control ui getirmek (AnaSayfa.cs)

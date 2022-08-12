@@ -63,6 +63,8 @@ namespace TurkHavaYollarıKayıtSistemi
                 DataTable dt1 = new DataTable();
                 sorgu1.Fill(dt1);
                 ConstValue.KullanciID = Convert.ToInt32(dt1.Rows[0][0].ToString());
+                SqlCommand cmd = new SqlCommand("Exec KullanciAdiGetir1'" + ConstValue.KullanciID + "'", db);
+                cmd.ExecuteNonQuery();
                 this.Hide();
                 Dashboard dash = new Dashboard();
                 dash.Show();
@@ -70,16 +72,14 @@ namespace TurkHavaYollarıKayıtSistemi
             else
                 MessageBox.Show("Kullanci Adı ve Şifresi giriniz !!", "Bütün boşlukları doldurun", MessageBoxButtons.OK, MessageBoxIcon.Error);
             db.Close();
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
         //X butuno pencere kapatmak icin
         private void button2_Click_1(object sender, EventArgs e)
         {
+            db.Open();
+            SqlCommand cmd = new SqlCommand("Exec KullanciAdiGetir", db);
+            cmd.ExecuteNonQuery();
+            db.Close();
             Application.Exit();
         }
     }

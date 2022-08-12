@@ -59,6 +59,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         }
         private void KC_BiletAl_Load(object sender, EventArgs e)
         {
+            //Tab1 icin
             db.Open();
             SqlDataAdapter sorgu = new SqlDataAdapter("Select * From Tbl_Yolculuk ", db);
             DataTable dt = new DataTable();
@@ -66,11 +67,23 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             dataGridView1.DataSource = dt;
             FillDataGridView();
             UpdateFont();
+            //tab2 icin
             SqlDataAdapter sorgu1 = new SqlDataAdapter("Select * from [YolculukBiletAl]", db);
             DataTable dt1 = new DataTable();
             sorgu1.Fill(dt1);
             dataGridView2.DataSource = dt1;
             dataGridView2.Columns[0].HeaderText = "İşlem Numersaı";
+            //tab3 icin silme ekleme islemleri triggerler le kayidedioyr
+            SqlDataAdapter sorgu2 = new SqlDataAdapter("Select * From Tbl_YolcuYolculukAudit order by UpdatedOn Desc", db);
+            DataTable dt2 = new DataTable();
+            sorgu2.Fill(dt2);
+            dataGridView3.DataSource = dt2;
+            dataGridView3.Columns[1].Visible = false;
+            dataGridView3.Columns[0].HeaderText = "İşlem ID";
+            dataGridView3.Columns[2].HeaderText = "Bilet Sahibi";
+            dataGridView3.Columns[3].HeaderText = "İşlem Tarihi";
+            dataGridView3.Columns[4].HeaderText = "Yapan";
+            dataGridView3.Columns[5].HeaderText = "İşlem Türü";
             db.Close();
             counters();
         }
@@ -111,6 +124,11 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         {
             int CounterBilet = dataGridView2.DisplayedRowCount(true);
             labelYolculukSayisi.Text = "Bilet Sayısı: " + CounterBilet.ToString();
+        }
+        private void Counterislem()
+        {
+            int CounterBilet = dataGridView3.DisplayedRowCount(true);
+            labelYolculukSayisi.Text = "İşlem Sayısı: " + CounterBilet.ToString();
         }
         //dtpTarih deger alip almadigini kontrol etmek icin
         bool control = false;
@@ -170,9 +188,10 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
         //tab degisince bilet sil butonu cikacak ve bilet sayisi yenilecek geri tab gidince kalmayacaklar
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedIndex == 1) { btnBiletSil.Visible = true; CounterBilet();}
+            if (tabControl1.SelectedIndex == 1) { btnBiletSil.Visible = true; CounterBilet(); btnSifirla.Visible = false; cbNerden.Visible = false; cbNereye.Visible = false; dtpTarih.Visible = false; }
                 
-            else if(tabControl1.SelectedIndex == 0) { btnBiletSil.Visible = false; counters(); }
+            else if(tabControl1.SelectedIndex == 0) { btnBiletSil.Visible = false; counters(); btnSifirla.Visible = true; cbNerden.Visible = true; cbNereye.Visible = true; dtpTarih.Visible = true; }
+            else if(tabControl1.SelectedIndex == 2) { btnBiletSil.Visible = false; Counterislem(); btnSifirla.Visible = false; cbNerden.Visible = false; cbNereye.Visible = false; dtpTarih.Visible = false; }
         }
         //tablodan bir cell uzerinde basarsak silmek butonu cikar silme basarsak kayit siliniyor
         //Secilen cell'in hangi satirda oldugunu ogrencmek icin 
@@ -196,7 +215,6 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
                 MessageBox.Show("Bilet Kaydı Silindi");
                 this.OnLoad(e);
             }
-        }
-        
+        } 
     }
 }
