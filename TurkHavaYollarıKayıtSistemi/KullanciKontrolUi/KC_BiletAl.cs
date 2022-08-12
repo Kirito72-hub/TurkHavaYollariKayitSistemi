@@ -66,7 +66,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             dataGridView1.DataSource = dt;
             FillDataGridView();
             UpdateFont();
-            SqlDataAdapter sorgu1 = new SqlDataAdapter("Select YolcuYolculukID, y.Ad+' '+y.Soyad as 'Ad Soyad', y.TC, yk.Nerden, yk.Nereye, yk.GidisTarihi, yk.VarisTarihi, k.Kullanci as 'işlem yapanı' From Tbl_YolcuYolculuk INNER JOIN Tbl_Kullanci k on k.ID=Tbl_YolcuYolculuk.KullanciID INNER JOIN Tbl_Yolcu y ON y.YolcuID=Tbl_YolcuYolculuk.YolcuID INNER JOIN Tbl_Yolculuk yk ON yk.YolculukID=Tbl_YolcuYolculuk.YolculukID", db);
+            SqlDataAdapter sorgu1 = new SqlDataAdapter("Select * from [YolculukBiletAl]", db);
             DataTable dt1 = new DataTable();
             sorgu1.Fill(dt1);
             dataGridView2.DataSource = dt1;
@@ -190,7 +190,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             if (dialogResult == DialogResult.Yes)
             {
                 db.Open();
-                SqlCommand sorguSil = new SqlCommand("Exec DeleteYolcuYolculuk Where YolcuYolculukID='"+ Scell + "'", db);
+                SqlCommand sorguSil = new SqlCommand("Exec DeleteYolcuYolculuk '" + Scell + "'", db);
                 sorguSil.ExecuteNonQuery();
                 db.Close();
                 MessageBox.Show("Bilet Kaydı Silindi");
