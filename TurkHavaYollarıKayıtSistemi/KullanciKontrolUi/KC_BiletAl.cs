@@ -70,7 +70,7 @@ namespace TurkHavaYollarıKayıtSistemi.KullanciKontrolUi
             DataTable dt1 = new DataTable();
             sorgu1.Fill(dt1);
             dataGridView2.DataSource = dt1;
-            dataGridView2.Columns[0].Visible = false;
+            dataGridView2.Columns[0].HeaderText = "İşlem Numersaı";
             db.Close();
             counters();
         }
