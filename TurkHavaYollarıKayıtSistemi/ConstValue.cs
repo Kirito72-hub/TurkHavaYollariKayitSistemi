@@ -16,6 +16,6 @@ namespace TurkHavaYollarıKayıtSistemi
         public static int YolcuBulID { get; set; }
         public static int YolculukID { get; set; }
 
-        public static string connectionString = "Data Source=DESKTOP-7RAAP8M\\SQLEXPRESS;Initial Catalog=THY;Integrated Security=True";
+        public static string connectionString = "Data Source=*;Initial Catalog=THY;Integrated Security=True";
     }
 }
